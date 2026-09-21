@@ -6,7 +6,6 @@ import id from '../locales/id/landing.json'
 
 const STORAGE_KEY = 'han-lang'
 
-/** Best practice a11y/SEO: atribut <html lang> selalu sinkron dengan bahasa aktif. */
 function applyHtmlLang(lng) {
   const base = (lng || 'id').split('-')[0]
   document.documentElement.setAttribute('lang', base)
@@ -23,9 +22,9 @@ i18n
     fallbackLng: 'id',
     supportedLngs: ['id', 'en'],
     defaultNS: 'landing',
-    // Urutan deteksi: pilihan tersimpan > bahasa browser. Pilihan user di-cache.
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['querystring', 'localStorage', 'navigator'],
+      lookupQuerystring: 'lang',
       lookupLocalStorage: STORAGE_KEY,
       caches: ['localStorage'],
     },

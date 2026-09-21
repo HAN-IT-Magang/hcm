@@ -29,7 +29,6 @@ export function Navbar() {
 
   const nav = t('nav', { returnObjects: true })
 
-  // Close desktop dropdown with Escape
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') setOpenDrop(null)
@@ -45,18 +44,16 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b-[3px] border-[#00104D] bg-[#FFFFFF]">
-      <nav className="mx-auto flex h-20 sm:h-[88px] w-full max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
+      <nav className="mx-auto flex h-16 sm:h-20 sm:h-[88px] w-full max-w-7xl items-center justify-between gap-4 sm:gap-6 px-4 sm:px-8">
 
-        {/* Brand Logo with User's Official Asset */}
         <Link to="/" className="flex shrink-0 items-center gap-3 hover:-rotate-2 hover:scale-105 transition-all duration-300 origin-left" aria-label="HAN Creative Marketing - Home">
           <img
             src={logoHan}
             alt="HAN Creative Marketing (HCM)"
-            className="h-10 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
+            className="h-9 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
           />
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden min-w-0 flex-1 items-center justify-center gap-7 lg:flex">
           {Array.isArray(nav) && nav.map((item) =>
             item.children ? (
@@ -105,7 +102,6 @@ export function Navbar() {
           )}
         </div>
 
-        {/* Right Actions: CTA button + ID/EN Toggle */}
         <div className="hidden shrink-0 items-center gap-6 lg:flex">
           <a
             href={waUrl}
@@ -113,7 +109,6 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-[999px] bg-[#FFD600] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#00104D] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none px-6 py-2.5 font-montserrat font-bold text-sm text-[#00104D] uppercase tracking-wide transition-all duration-200 cursor-pointer overflow-hidden relative"
           >
-            {/* Shimmer effect on hover */}
             <span className="absolute inset-0 -translate-x-full bg-white/40 skew-x-[30deg] transition-transform duration-500 group-hover:translate-x-[150%]"></span>
 
             <span className="relative z-10">{isEn ? 'Scale Your Brand' : 'Mulai Scale Brand'}</span>
@@ -122,9 +117,8 @@ export function Navbar() {
           <LanguageToggle />
         </div>
 
-        {/* Mobile Hamburger Button */}
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-lg lg:hidden"
+          className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-[10px] border-[2px] sm:border-[3px] border-[#00104D] bg-[#FFFFFF] shadow-[3px_3px_0_0_#00104D] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-base sm:text-lg text-[#00104D] lg:hidden"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
@@ -133,9 +127,8 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu Panel */}
       {mobileOpen && (
-        <div className="border-t border-black/[0.06] bg-white px-5 py-4 lg:hidden">
+        <div className="border-t-[2px] sm:border-t-[3px] border-[#00104D] bg-white px-4 sm:px-5 py-3 sm:py-4 lg:hidden max-h-[calc(100dvh-4rem)] sm:max-h-[calc(100dvh-5rem)] overflow-y-auto">
           <div className="flex flex-col">
             {Array.isArray(nav) && nav.map((item) =>
               item.children ? (
@@ -155,7 +148,7 @@ export function Navbar() {
                           key={child.label}
                           href={child.href}
                           onClick={() => setMobileOpen(false)}
-                          className="block py-2 text-sm text-neutral-600 hover:text-[#0030ff]"
+                          className="block py-2.5 text-sm text-neutral-600 hover:text-[#0030ff]"
                         >
                           {child.label}
                         </a>

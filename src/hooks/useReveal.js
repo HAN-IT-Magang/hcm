@@ -1,10 +1,5 @@
 import { useEffect } from 'react'
 
-/**
- * Reveal-on-scroll sederhana (IntersectionObserver).
- * Pakai: <div data-reveal> ... </div>
- * Class `is-visible` akan ditambah otomatis saat masuk viewport.
- */
 export function useReveal() {
   useEffect(() => {
     if (!('IntersectionObserver' in window)) {
@@ -24,10 +19,8 @@ export function useReveal() {
       { threshold: 0.12 },
     )
 
-    // Observe initial elements
     document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el))
 
-    // Watch for new elements added to the DOM (for HMR support)
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {

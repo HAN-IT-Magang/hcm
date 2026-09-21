@@ -13,7 +13,7 @@ export function Testimonials() {
         title={t('testimonials.title')}
         dark
       />
-      <Container className="grid gap-5 md:grid-cols-3">
+      <Container className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
           <figure key={item.name} data-reveal className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
             <div className="text-yellow-400">★★★★★</div>

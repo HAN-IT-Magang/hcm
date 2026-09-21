@@ -1,6 +1,3 @@
-/**
- * Konfigurasi global brand + kontak + sosial media HCM (HAN Creative Marketing).
- */
 export const siteConfig = {
   brand: {
     name: 'HAN Creative Marketing',
@@ -35,8 +32,11 @@ export const siteConfig = {
     label: 'Mulai Scale Brand',
   },
   seo: {
-    title: 'HAN Creative Marketing (HCM) — Your Growth Partner',
+    title: 'HAN Creative Marketing (HCM) — Partner Pertumbuhan E-Commerce TikTok Shop & Shopee',
     description:
-      'Scale Your E-Commerce Brand with the Right Growth Partner. Jasa Marketplace Management, KOL/Affiliator, dan Meta/TikTok Ads untuk TikTok Shop & Shopee.',
+      'Scale brand e-commerce kamu bareng HCM: Marketplace Management, Affiliator & KOL Management, dan TikTok Shop & Meta Ads untuk TikTok Shop dan Shopee. Konsultasi gratis.',
+    titleEn: 'HAN Creative Marketing (HCM) — E-Commerce Growth Partner for TikTok Shop & Shopee',
+    descriptionEn:
+      'Scale your e-commerce brand with HCM: Marketplace Management, Affiliator & KOL Management, and TikTok Shop & Meta Ads for TikTok Shop and Shopee. Free consultation.',
   },
 }

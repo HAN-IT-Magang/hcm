@@ -18,7 +18,7 @@
   ],
   "cta": {
     "getStarted": "Scale Your Brand",
-    "contactWa": "Chat WhatsApp"
+    "contactWa": "Chat on WhatsApp"
   },
   "hero": {
     "expertsIn": "E-Commerce Experts in",
@@ -37,7 +37,7 @@
   "about": {
     "eyebrow": "Your Growth Partner",
     "title": "Not just another agency — we are your dedicated growth partner",
-    "desc": "HCM adalah partner pertumbuhan bagi brand e-commerce yang ingin berkembang melalui strategi yang terintegrasi. Dari tahap awal hingga mencapai pertumbuhan jutaan hingga miliaran GMV per bulan, kami percaya bahwa kombinasi antara strategi, data, dan execution adalah kunci untuk memenangkan persaingan e-commerce."
+    "desc": "HCM is a growth partner for e-commerce brands aiming to scale through integrated strategy. From early-stage stores to brands growing toward millions and billions in monthly GMV, we believe the combination of strategy, data, and execution is the key to winning e-commerce competition."
   },
   "whyUs": {
     "eyebrow": "Why Choose HCM",
@@ -127,28 +127,28 @@
     "subtitle": "Have questions about HCM services? Find your answers here.",
     "items": [
       {
-        "q": "Layanan apa saja yang tersedia di HCM?",
-        "a": "HCM menyediakan solusi e-commerce secara end-to-end: Marketplace Activation (MPA), Marketplace Optimization (MPO), Affiliate & KOL Management, Ads Management, Social Media Management, Digital Creative Asset, Live Streaming Product."
+        "q": "What services does HCM offer?",
+        "a": "HCM provides end-to-end e-commerce solutions: Marketplace Activation (MPA), Marketplace Optimization (MPO), Affiliate & KOL Management, Ads Management, Social Media Management, Digital Creative Assets, and Product Live Streaming."
       },
       {
-        "q": "Apakah HCM hanya cocok untuk brand besar?",
-        "a": "Tidak. HCM bisa support berbagai tahap bisnis, mulai dari brand yang baru memulai e-commerce, brand yang ingin meningkatkan penjualan, hingga brand yang ingin melakukan scale-up."
+        "q": "Is HCM only a fit for large brands?",
+        "a": "No. HCM supports businesses at every stage — from brands just getting started in e-commerce, to brands looking to lift sales, to brands ready to scale up."
       },
       {
-        "q": "Apa yang membedakan HCM dengan agency marketing lain?",
-        "a": "HCM tidak hanya berperan sebagai penyedia jasa, tetapi sebagai partner pertumbuhan. Kami memahami bahwa setiap brand memiliki tantangan berbeda, sehingga strategi yang dibuat menyesuaikan kondisi bisnis, target market, dan tujuan brand."
+        "q": "What sets HCM apart from other marketing agencies?",
+        "a": "HCM acts as a growth partner, not just a service provider. We understand that every brand faces different challenges, so each strategy is tailored to your business conditions, target market, and brand goals."
       },
       {
-        "q": "Apakah HCM menggunakan sistem kerja berbasis hasil?",
-        "a": "Ya. Selain skema Management Fee, HCM juga punya pendekatan partnership dengan brand melalui strategi yang berorientasi pada pertumbuhan bisnis (Sharing Commision). S&K berlaku."
+        "q": "Does HCM work on a performance-based model?",
+        "a": "Yes. Beyond the Management Fee scheme, HCM also offers brand partnerships through business-growth-oriented strategies (commission sharing). T&Cs apply."
       },
       {
-        "q": "Berapa lama waktu yang dibutuhkan untuk melihat hasil?",
-        "a": "Setiap brand memiliki kondisi berbeda tergantung kategori produk, kesiapan toko, budget marketing, dan strategi yang dijalankan. Namun, HCM selalu memulai dengan analisa kondisi brand untuk menentukan strategi dan target yang realistis."
+        "q": "How long does it take to see results?",
+        "a": "Every brand is different — it depends on product category, store readiness, marketing budget, and the strategy being executed. HCM always starts by analyzing your brand's condition to define a realistic strategy and targets."
       },
       {
-        "q": "Bagaimana cara mulai bekerja sama dengan HCM?",
-        "a": "Cukup konsultasikan kebutuhan brand Anda melalui WhatsApp. Tim HCM akan membantu memahami kondisi bisnis Anda dan memberikan rekomendasi strategi yang sesuai."
+        "q": "How do I start working with HCM?",
+        "a": "Simply consult your brand needs via WhatsApp. The HCM team will help map your business conditions and recommend the most suitable strategy."
       }
     ]
   },
@@ -165,5 +165,64 @@
     "servicesTitle": "Services",
     "contactTitle": "Contact Us",
     "rights": "All rights reserved. Your Growth Partner."
+  },
+  "meta": {
+    "title": "HAN Creative Marketing (HCM) — E-Commerce Growth Partner for TikTok Shop & Shopee",
+    "description": "Scale your e-commerce brand with HCM: Marketplace Management, Affiliator & KOL Management, and TikTok Shop & Meta Ads for TikTok Shop and Shopee. Free consultation.",
+    "keywords": "e-commerce growth partner, TikTok Shop management, Shopee management, affiliator management, KOL management, TikTok Ads, Meta Ads, marketplace optimization, HCM, HAN Creative Marketing",
+    "locale": "en_US",
+    "localeAlternate": "id_ID"
+  },
+  "logos": {
+    "title": "Our Clients",
+    "satisfiedLine1": "Clients",
+    "satisfiedLine2": "Satisfied",
+    "more": "AND MANY MORE ++"
+  },
+  "process": {
+    "eyebrow": "How It Works",
+    "title": "The Process to Scale with HCM",
+    "steps": [
+      {
+        "no": "01",
+        "title": "Brand Audit",
+        "desc": "SEO keyword research, competitor mapping, and a full check-up of your store's health and readiness."
+      },
+      {
+        "no": "02",
+        "title": "Strategy & Gameplay",
+        "desc": "A tailored gameplay of campaigns, flash sales, affiliators, and ads aimed at your GMV target."
+      },
+      {
+        "no": "03",
+        "title": "End-to-End Execution",
+        "desc": "Showcase optimization, affiliator seeding, content production, live streaming, and ads all running."
+      },
+      {
+        "no": "04",
+        "title": "Scale & Report",
+        "desc": "Scale winning budgets with transparent weekly ROAS and GMV reporting."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Stories from Brands Scaling with HCM",
+    "items": []
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Transparent Plans to Scale Your Store",
+    "subtitle": "Pick a plan that matches your brand's stage. Every plan is ROAS-driven.",
+    "badge": "Most Popular",
+    "note": "Need a custom scope? Chat with our team for a tailored quotation.",
+    "items": []
+  },
+  "ctaSection": {
+    "waText": "Hello HCM, I want to consult about scaling my e-commerce brand.",
+    "title": "Ready to Scale Your E-Commerce Brand?",
+    "subtitle": "Chat with the HCM growth team today — your first consultation is free.",
+    "primaryCta": "Chat via WhatsApp",
+    "secondaryCta": "View Pricing"
   }
 }

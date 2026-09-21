@@ -1,12 +1,16 @@
 import { useReveal } from '@/hooks/useReveal'
+import { useSeo } from '@/hooks/useSeo'
 import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 import { FloatingWhatsApp } from '../ui/FloatingWhatsApp'
+import { ScrollProgress } from '../ui/ScrollProgress'
 
 export function Layout({ children }) {
   useReveal()
+  useSeo()
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      <ScrollProgress />
       <Navbar />
       <div className="overflow-x-hidden flex-1 flex flex-col">
         <main className="flex-1">{children}</main>

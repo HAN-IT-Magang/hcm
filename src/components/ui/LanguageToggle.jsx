@@ -6,11 +6,6 @@ const LANGS = [
   { code: 'en', label: 'EN' },
 ]
 
-/**
- * Segmented language toggle (pengganti tombol bell).
- * - role="group" + aria-pressed: accessible untuk screen reader
- * - changeLanguage() otomatis persist ke localStorage via LanguageDetector cache
- */
 export function LanguageToggle({ className }) {
   const { i18n } = useTranslation()
   const active = (i18n.language || 'id').split('-')[0]

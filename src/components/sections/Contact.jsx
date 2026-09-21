@@ -24,16 +24,15 @@ export function Contact() {
   }
 
   return (
-    <section id="kontak" className="scroll-mt-20 bg-neutral-50 py-20">
+    <section id="kontak" className="scroll-mt-20 bg-neutral-50 py-14 sm:py-20">
       <SectionHeading
         eyebrow={t('contact.eyebrow')}
         title={t('contact.title')}
         subtitle={t('contact.subtitle')}
       />
-      <Container className="grid gap-8 lg:grid-cols-5 mt-12">
-        
-        {/* Contact Info Card */}
-        <div data-reveal className="rounded-3xl bg-[#0b0b14] p-8 text-white lg:col-span-2 flex flex-col justify-between shadow-xl">
+      <Container className="grid gap-6 sm:gap-8 lg:grid-cols-5 mt-10 sm:mt-12">
+
+        <div data-reveal className="rounded-2xl sm:rounded-3xl bg-[#0b0b14] p-5 sm:p-8 text-white lg:col-span-2 flex flex-col justify-between shadow-xl min-w-0">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0030ff]/30 text-blue-300 text-xs font-semibold mb-4 border border-blue-500/30">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -41,8 +40,8 @@ export function Contact() {
             </div>
             <h3 className="text-xl font-bold">{isEn ? 'Consultation & HQ' : 'Kantor & Konsultasi'}</h3>
             <p className="mt-2 text-xs text-white/60 leading-relaxed">
-              {isEn 
-                ? 'Connect directly with our e-commerce growth specialists.' 
+              {isEn
+                ? 'Connect directly with our e-commerce growth specialists.'
                 : 'Hubungi langsung tim spesialis TikTok Shop & Shopee HCM.'}
             </p>
 
@@ -119,8 +118,7 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Contact Consultation Form */}
-        <form data-reveal onSubmit={onSubmit} className="rounded-3xl border border-neutral-200 bg-white p-8 lg:col-span-3 shadow-sm flex flex-col justify-between">
+        <form data-reveal onSubmit={onSubmit} className="rounded-2xl sm:rounded-3xl border border-neutral-200 bg-white p-5 sm:p-8 lg:col-span-3 shadow-sm flex flex-col justify-between min-w-0">
           <div>
             <h3 className="text-lg font-bold text-neutral-900 mb-1">
               {isEn ? 'Get a Free Store Growth Audit' : 'Dapatkan Audit Pertumbuhan Toko Gratis'}

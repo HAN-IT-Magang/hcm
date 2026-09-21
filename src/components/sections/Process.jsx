@@ -12,7 +12,7 @@ export function Process() {
         eyebrow={t('process.eyebrow')}
         title={t('process.title')}
       />
-      <Container className="grid gap-5 md:grid-cols-4">
+      <Container className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((s) => (
           <div key={s.no} data-reveal className="rounded-3xl border p-6">
             <p className="text-3xl font-extrabold text-brand-600/20">{s.no}</p>

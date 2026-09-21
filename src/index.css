@@ -44,11 +44,26 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 body {
   @apply bg-white text-ink-700 font-sans antialiased;
 }
 
-/* Reveal on scroll */
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);

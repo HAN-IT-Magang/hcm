@@ -165,5 +165,64 @@
     "servicesTitle": "Layanan",
     "contactTitle": "Hubungi Kami",
     "rights": "All rights reserved. Your Growth Partner."
+  },
+  "meta": {
+    "title": "HAN Creative Marketing (HCM) — Partner Pertumbuhan E-Commerce TikTok Shop & Shopee",
+    "description": "Scale brand e-commerce kamu bareng HCM: Marketplace Management, Affiliator & KOL Management, dan TikTok Shop & Meta Ads untuk TikTok Shop dan Shopee. Konsultasi gratis.",
+    "keywords": "partner pertumbuhan e-commerce, jasa TikTok Shop, jasa Shopee, affiliator management, KOL management, TikTok Ads, Meta Ads, optimasi marketplace, HCM, HAN Creative Marketing",
+    "locale": "id_ID",
+    "localeAlternate": "en_US"
+  },
+  "logos": {
+    "title": "Klien Kami",
+    "satisfiedLine1": "Klien",
+    "satisfiedLine2": "Puas",
+    "more": "DAN MASIH BANYAK ++"
+  },
+  "process": {
+    "eyebrow": "Cara Kerja",
+    "title": "Proses Scale Bareng HCM",
+    "steps": [
+      {
+        "no": "01",
+        "title": "Audit & Bedah Brand",
+        "desc": "Riset keyword SEO, pemetaan kompetitor, dan cek menyeluruh kesehatan serta kesiapan tokomu."
+      },
+      {
+        "no": "02",
+        "title": "Strategi & Gameplay",
+        "desc": "Gameplay campaign, flash sale, affiliator, dan ads yang disesuaikan dengan target GMV brand kamu."
+      },
+      {
+        "no": "03",
+        "title": "Eksekusi End-to-End",
+        "desc": "Optimasi etalase, seeding affiliator, produksi konten, live streaming, dan ads berjalan bersamaan."
+      },
+      {
+        "no": "04",
+        "title": "Scale & Laporan",
+        "desc": "Scale budget pemenang dengan laporan ROAS dan GMV yang transparan setiap minggu."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimoni",
+    "title": "Cerita Brand yang Scale Bareng HCM",
+    "items": []
+  },
+  "pricing": {
+    "eyebrow": "Harga",
+    "title": "Paket Transparan untuk Scale Tokomu",
+    "subtitle": "Pilih paket sesuai tahap brand kamu. Semua paket fokus ke ROAS.",
+    "badge": "Paling Populer",
+    "note": "Butuh scope khusus? Chat tim kami untuk penawaran yang disesuaikan.",
+    "items": []
+  },
+  "ctaSection": {
+    "waText": "Halo HCM, saya mau konsultasi scale brand e-commerce saya.",
+    "title": "Siap Scale Brand E-Commerce Kamu?",
+    "subtitle": "Chat tim growth specialist HCM sekarang, konsultasi pertama gratis.",
+    "primaryCta": "Chat via WhatsApp",
+    "secondaryCta": "Lihat Harga"
   }
 }
