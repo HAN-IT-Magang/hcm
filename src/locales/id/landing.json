@@ -1,0 +1,169 @@
+{
+  "nav": [
+    {
+      "label": "Layanan",
+      "href": "#layanan",
+      "children": [
+        { "label": "Marketplace Management", "href": "#layanan" },
+        { "label": "Affiliator Management", "href": "#layanan" },
+        { "label": "Ads Management", "href": "#layanan" },
+        { "label": "Live Streaming & Content", "href": "#layanan" }
+      ]
+    },
+    { "label": "Tentang Kami", "href": "#about" },
+    { "label": "Kenapa HCM", "href": "#why-us" },
+    { "label": "Portofolio", "href": "#portofolio" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Kontak", "href": "#kontak" }
+  ],
+  "cta": {
+    "getStarted": "Mulai Scale Brand",
+    "contactWa": "Chat WhatsApp"
+  },
+  "hero": {
+    "expertsIn": "Spesialis E-Commerce di",
+    "title": "Scale Brand E-Commerce Kamu bareng",
+    "titleHighlight": "Growth Partner",
+    "titleEnd": "yang Tepat",
+    "subtitle": "HAN Creative Marketing (HCM) adalah partner pertumbuhan untuk brand e-commerce kamu di TikTok Shop & Shopee. Eksekusi Marketplace Management, Affiliator Management, dan Ads Management berbasis data.",
+    "primaryCta": "Mulai Scale Brand",
+    "secondaryCta": "Lihat Layanan",
+    "stats": [
+      { "value": "Rp 25M+", "label": "Total GMV Dihasilkan" },
+      { "value": "500+", "label": "Kreator & Affiliator Aktif" },
+      { "value": "4.8x", "label": "Rata-rata ROAS Iklan" }
+    ]
+  },
+  "about": {
+    "eyebrow": "Your Growth Partner",
+    "title": "Bukan sekadar agensi biasa, kami partner bertumbuh brand kamu",
+    "desc": "HCM adalah partner pertumbuhan bagi brand e-commerce yang ingin berkembang melalui strategi yang terintegrasi. Dari tahap awal hingga mencapai pertumbuhan jutaan hingga miliaran GMV per bulan, kami percaya bahwa kombinasi antara strategi, data, dan execution adalah kunci untuk memenangkan persaingan e-commerce."
+  },
+  "whyUs": {
+    "eyebrow": "Kenapa Pilih HCM",
+    "title": "5 Alasan Brand Memilih Bertumbuh Bersama HCM",
+    "subtitle": "Kombinasi strategi data, eksekusi gesit, dan relasi kreator terbukti membawa brand naik kelas.",
+    "items": [
+      {
+        "icon": "🚀",
+        "title": "Growth-Oriented Partner",
+        "desc": "Kami tumbuh ketika bisnis Anda berkembang."
+      },
+      {
+        "icon": "📊",
+        "title": "Performance Driven Strategy",
+        "desc": "Setiap strategi dibuat berdasarkan data dan target bisnis."
+      },
+      {
+        "icon": "⚡",
+        "title": "End-to-End E-commerce Solution",
+        "desc": "Satu partner untuk seluruh kebutuhan marketing digital Anda."
+      },
+      {
+        "icon": "🎯",
+        "title": "Creative Meets Commerce",
+        "desc": "Menggabungkan kreativitas dan strategi penjualan untuk menghasilkan impact."
+      },
+      {
+        "icon": "🏆",
+        "title": "Experienced Team",
+        "desc": "Berpengalaman menangani berbagai brand dan kategori produk."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Layanan Inti",
+    "title": "Solusi Lengkap untuk Scale Toko E-Commerce Kamu",
+    "subtitle": "Fokus pada 3 pilar utama pendorong omzet marketplace masa kini.",
+    "items": [
+      {
+        "icon": "🏪",
+        "title": "Marketplace Management",
+        "desc": "Optimasi menyeluruh toko TikTok Shop & Shopee kamu. Setup etalase, copywriting produk, dekorasi toko, optimasi flash sale, manajemen voucher, hingga strategi bundling.",
+        "points": ["Optimasi Algoritma & SEO Toko", "Campaign & Flash Sale Setup", "Manajemen Stok & Voucher Promosi"]
+      },
+      {
+        "icon": "🌟",
+        "title": "Affiliator Management",
+        "desc": "Kurasi dan kolaborasi dengan 500+ kreator & affiliator aktif. Pengiriman sampel terarah, briefing konten persuasif, monitoring postingan, dan tracking GMV affiliasi harian.",
+        "points": ["Kurasi 500+ Top Affiliator", "Distribusi & Monitoring Sampel", "Brief Konten High-Conversion"]
+      },
+      {
+        "icon": "📈",
+        "title": "Ads Management",
+        "desc": "Manajemen iklan berbayar TikTok Shop Ads & Meta/Shopee Ads. Riset audiens presisi, A/B testing materi kreatif, struktur campaign efisien, hingga scaling profitabel.",
+        "points": ["Fokus Target ROAS Positif", "A/B Testing Hook & Visual", "Laporan Transparan Real-Time"]
+      }
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Studi Kasus & Hasil",
+    "title": "Bukti Nyata Pertumbuhan Bersama HCM",
+    "subtitle": "Data riil peningkatan omzet dan performa toko klien kami.",
+    "items": [
+      {
+        "tag": "TikTok Shop • Fashion Brand",
+        "title": "Scale GMV 4.2x dalam 60 Hari",
+        "desc": "Kombinasi seeding 80+ video affiliator harian dan TikTok Shop GMV Ads menghasilkan lonjakan pesanan drastis.",
+        "metric": "+320% GMV"
+      },
+      {
+        "tag": "Shopee & TikTok • Beauty Care",
+        "title": "ROAS 5.4x & Top Creator Viral",
+        "desc": "Optimasi etalase toko dan kolaborasi beauty creator meningkatkan conversion rate toko hingga 2.8x.",
+        "metric": "5.4x ROAS"
+      },
+      {
+        "tag": "F&B • Snack & Beverages",
+        "title": "15.000+ Paket Terjual per Bulan",
+        "desc": "Manajemen toko end-to-end, flash sale harian, dan live streaming terstruktur memecahkan rekor penjualan toko.",
+        "metric": "15k+ Orders"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Pertanyaan yang Sering Diajukan",
+    "subtitle": "Punya pertanyaan seputar layanan HCM? Temukan jawabannya di sini.",
+    "items": [
+      {
+        "q": "Layanan apa saja yang tersedia di HCM?",
+        "a": "HCM menyediakan solusi e-commerce secara end-to-end: Marketplace Activation (MPA), Marketplace Optimization (MPO), Affiliate & KOL Management, Ads Management, Social Media Management, Digital Creative Asset, Live Streaming Product."
+      },
+      {
+        "q": "Apakah HCM hanya cocok untuk brand besar?",
+        "a": "Tidak. HCM bisa support berbagai tahap bisnis, mulai dari brand yang baru memulai e-commerce, brand yang ingin meningkatkan penjualan, hingga brand yang ingin melakukan scale-up."
+      },
+      {
+        "q": "Apa yang membedakan HCM dengan agency marketing lain?",
+        "a": "HCM tidak hanya berperan sebagai penyedia jasa, tetapi sebagai partner pertumbuhan. Kami memahami bahwa setiap brand memiliki tantangan berbeda, sehingga strategi yang dibuat menyesuaikan kondisi bisnis, target market, dan tujuan brand."
+      },
+      {
+        "q": "Apakah HCM menggunakan sistem kerja berbasis hasil?",
+        "a": "Ya. Selain skema Management Fee, HCM juga punya pendekatan partnership dengan brand melalui strategi yang berorientasi pada pertumbuhan bisnis (Sharing Commision). S&K berlaku."
+      },
+      {
+        "q": "Berapa lama waktu yang dibutuhkan untuk melihat hasil?",
+        "a": "Setiap brand memiliki kondisi berbeda tergantung kategori produk, kesiapan toko, budget marketing, dan strategi yang dijalankan. Namun, HCM selalu memulai dengan analisa kondisi brand untuk menentukan strategi dan target yang realistis."
+      },
+      {
+        "q": "Bagaimana cara mulai bekerja sama dengan HCM?",
+        "a": "Cukup konsultasikan kebutuhan brand Anda melalui WhatsApp. Tim HCM akan membantu memahami kondisi bisnis Anda dan memberikan rekomendasi strategi yang sesuai."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontak Kami",
+    "title": "Siap Melipatgandakan Omzet E-Commerce Kamu?",
+    "subtitle": "Diskusikan target pertumbuhan brand kamu bersama tim growth specialist HCM sekarang.",
+    "ctaButton": "Hubungi via WhatsApp",
+    "hours": "Jam Operasional: 08.00 - 16.00 WIB",
+    "address": "Jl. Rejodani, Sardonoharjo, Ngaglik, Sleman, DIY 55581"
+  },
+  "footer": {
+    "navTitle": "Navigasi",
+    "servicesTitle": "Layanan",
+    "contactTitle": "Hubungi Kami",
+    "rights": "All rights reserved. Your Growth Partner."
+  }
+}
