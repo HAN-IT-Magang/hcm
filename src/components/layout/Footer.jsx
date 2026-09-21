@@ -22,13 +22,13 @@ export function Footer() {
   )
 
   const MailIcon = () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   )
 
   const PhoneIcon = () => (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
     </svg>
   )
@@ -56,7 +56,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-8 min-w-0">
+          <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-[1fr_1fr_1.5fr] gap-5 sm:gap-8 min-w-0">
 
             <div className="min-w-0">
               <h4 className="font-montserrat font-bold text-[#00104D] text-sm sm:text-base sm:text-lg uppercase mb-4 sm:mb-6">{t('footer.navTitle')}</h4>
@@ -95,7 +95,7 @@ export function Footer() {
                 <li>
                   <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-2 font-montserrat font-semibold text-xs sm:text-sm text-[#00104D]/70 hover:text-[#FF6A13] group">
                     <MailIcon />
-                    <span className="group-hover:underline underline-offset-4">{siteConfig.contact.email}</span>
+                    <span className="group-hover:underline underline-offset-4 break-all min-w-0">{siteConfig.contact.email}</span>
                   </a>
                 </li>
                 <li>

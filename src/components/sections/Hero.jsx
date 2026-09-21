@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../ui/Container'
 import { siteConfig } from '@/config/site'
@@ -21,40 +20,6 @@ function BrutalistBar({ height, delay = '0s', isTallest = false }) {
 export function Hero() {
   const { i18n } = useTranslation()
   const isEn = i18n.language === 'en'
-  const sectionRef = useRef(null)
-  const blueRef = useRef(null)
-  const contentRef = useRef(null)
-  const mockRef = useRef(null)
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    let raf = 0
-    const update = () => {
-      raf = 0
-      const section = sectionRef.current
-      if (!section) return
-      const rect = section.getBoundingClientRect()
-      const p = Math.min(1, Math.max(0, -rect.top / Math.max(1, rect.height)))
-      if (blueRef.current) blueRef.current.style.transform = `scaleY(${(1 + p * 1.3).toFixed(3)})`
-      if (contentRef.current) {
-        contentRef.current.style.transform = `translate3d(0, ${(-80 * p).toFixed(1)}px, 0)`
-        contentRef.current.style.opacity = Math.max(0, 1 - p / 0.7).toFixed(3)
-      }
-      if (mockRef.current) mockRef.current.style.transform = `translate3d(0, ${(-24 * p).toFixed(1)}px, 0)`
-    }
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update)
-    }
-    update()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
-      if (raf) cancelAnimationFrame(raf)
-    }
-  }, [])
-
   const waMessage = isEn
     ? 'Hello HCM, I would like to scale my e-commerce brand (TikTok Shop / Shopee).'
     : 'Halo HCM, saya mau konsultasi scale brand e-commerce saya di TikTok Shop & Shopee.'
@@ -62,9 +27,9 @@ export function Hero() {
   const waUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(waMessage)}`
 
   return (
-    <section ref={sectionRef} className="relative z-30 bg-[#FFFFFF] pt-5 sm:pt-12 lg:pt-14 select-none">
+    <section className="relative z-30 bg-[#FFFFFF] pt-5 sm:pt-12 lg:pt-14 select-none">
 
-      <div ref={blueRef} aria-hidden="true" className="absolute bottom-0 left-0 w-full h-32 sm:h-56 lg:h-[320px] bg-[#0030FF] z-0 origin-bottom will-change-transform" />
+      <div aria-hidden="true" className="absolute bottom-0 left-0 w-full h-32 sm:h-56 lg:h-[320px] bg-[#0030FF] z-0" />
 
       <div className="absolute top-20 -left-10 w-32 h-32 bg-[#00E0A4] rounded-[999px] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] opacity-20 z-0" />
       <div className="absolute top-40 -right-10 w-48 h-48 bg-[#FF2E93] rounded-[14px] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] rotate-12 opacity-10 z-0" />
@@ -99,7 +64,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div ref={contentRef} className="text-center max-w-5xl mx-auto will-change-transform">
+        <div className="text-center max-w-5xl mx-auto">
           <h1 className="font-anton text-[clamp(2rem,8.5vw,5.5rem)] sm:text-[clamp(2.5rem,7vw,5.5rem)] text-[#00104D] uppercase leading-[0.95] tracking-tight">
             {isEn ? (
               <>
@@ -142,14 +107,14 @@ export function Hero() {
             </a>
             <a
               href="#layanan"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 sm:px-9 sm:py-4 bg-[#FFFFFF] text-[#00104D] font-montserrat font-bold text-[13px] sm:text-[15px] rounded-[999px] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[6px_6px_0_0_#00104D] hover:bg-[#EAF0FF] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0_0_#00104D] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0_0_#00104D] transition-all duration-150"
+              className="hidden sm:inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 sm:px-9 sm:py-4 bg-[#FFFFFF] text-[#00104D] font-montserrat font-bold text-[13px] sm:text-[15px] rounded-[999px] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[6px_6px_0_0_#00104D] hover:bg-[#EAF0FF] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0_0_#00104D] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0_0_#00104D] transition-all duration-150"
             >
-              {isEn ? 'Book a demo' : 'Lihat Layanan'}
+              {isEn ? 'View Services' : 'Lihat Layanan'}
             </a>
           </div>
         </div>
 
-        <div ref={mockRef} className="mt-10 sm:mt-18 lg:mt-20 max-w-5xl mx-auto relative z-30 pointer-events-none select-none pb-8 sm:pb-16 lg:pb-24 will-change-transform">
+        <div className="mt-10 sm:mt-18 lg:mt-20 max-w-5xl mx-auto relative z-30 pointer-events-none select-none pb-8 sm:pb-16 lg:pb-24">
 
           <div className="rounded-[10px] sm:rounded-[14px] bg-[#FFFFFF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[8px_8px_0_0_#00104D] lg:shadow-[12px_12px_0_0_#00104D] overflow-hidden">
 

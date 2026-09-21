@@ -9,19 +9,19 @@ export function Portfolio() {
     {
       id: 1,
       title: 'NuMar Brand Identity Design',
-      category: 'Noakhali, Bangladesh',
+      category: 'Denpasar, Bali',
       image: 'https://placehold.co/600x800/EAF0FF/00104D?text=Brand+Identity',
     },
     {
       id: 2,
       title: 'Optic 3D Visual Campaign',
-      category: 'Noakhali, Bangladesh',
+      category: 'Denpasar, Bali',
       image: 'https://placehold.co/600x600/FF2E93/FFFFFF?text=3D+Design',
     },
     {
       id: 3,
       title: 'Manifest Branding Group',
-      category: 'Noakhali, Bangladesh',
+      category: 'Denpasar, Bali',
       image: 'https://placehold.co/600x800/00E0A4/00104D?text=Typography',
     }
   ]

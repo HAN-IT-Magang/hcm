@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '../ui/Container'
-import { Parallax } from '../ui/Parallax'
 
 export function Logos() {
   const { t } = useTranslation()
@@ -32,7 +31,7 @@ export function Logos() {
     <section id="logos" className="relative z-10 bg-[#0030FF] pt-10 sm:pt-16 lg:pt-24 pb-12 sm:pb-20 lg:pb-32 border-b-[3px] border-[#00104D] overflow-hidden">
       <Container>
 
-        <Parallax className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 md:mb-20 text-center px-2" from={40} to={-40}>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 md:mb-20 text-center px-2" data-reveal>
           <h2 className="font-anton text-5xl sm:text-7xl md:text-9xl text-[#FFFFFF] leading-none" style={{ textShadow: '6px 6px 0px #00104D' }}>
             100+
           </h2>
@@ -43,7 +42,7 @@ export function Logos() {
               {t('logos.satisfiedLine2')}
             </h2>
           </div>
-        </Parallax>
+        </div>
 
         <div className="w-full max-w-4xl mx-auto h-[2px] sm:h-[3px] bg-[#FFFFFF] mb-10 sm:mb-12 md:mb-20 opacity-50"></div>
 
