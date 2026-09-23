@@ -41,7 +41,7 @@ export function Footer() {
   return (
     <footer className="relative z-40 bg-gradient-to-br from-brand-600 via-brand-500 to-[#9b51e0] overflow-hidden">
       <Container className="relative z-10 pt-24 md:pt-32">
-        
+
         {/* Integrated CTA Section (tujuan link nav #kontak) */}
         <div id="kontak" className="max-w-5xl mb-32 scroll-mt-24">
           <h2 data-gsap="clip-left" className="font-sans font-light text-5xl md:text-8xl text-white leading-[1.1] tracking-tight mb-4 drop-shadow-md">
@@ -75,11 +75,11 @@ export function Footer() {
         <div className="w-full h-px bg-white/20 mb-12"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
-          
+
           {/* Left Column: Logo & Text */}
           <div className="lg:col-span-4 relative flex flex-col items-start">
 
-            
+
             {/* HAN Logo Image */}
             <img
               data-gsap="left"
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Right Columns: Links & Contact */}
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Navigation */}
             <div>
               <h4 className="font-sans font-bold text-white text-base tracking-wide uppercase mb-6">{t('footer.navTitle', 'NAVIGATION')}</h4>

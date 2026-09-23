@@ -5,7 +5,7 @@ import { Container } from '../ui/Container'
 
 export function Faq() {
   const { t } = useTranslation()
-  const [openIndex, setOpenIndex] = useState(0)
+  const [openIndex, setOpenIndex] = useState(-1)
   const items = t('faq.items', { returnObjects: true })
 
   return (
