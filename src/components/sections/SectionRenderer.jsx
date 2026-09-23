@@ -1,7 +1,7 @@
 import { landingSections } from '@/data/landing'
 import { About } from './About'
-import { Contact } from './Contact'
 import { Cta } from './Cta'
+import { Division } from './Division'
 import { Faq } from './Faq'
 import { Hero } from './Hero'
 import { Logos } from './Logos'
@@ -16,6 +16,7 @@ import { Ratecard } from './Ratecard'
 const registry = {
   hero: Hero,
   about: About,
+  division: Division,
   services: Services,
   whyUs: WhyUs,
   logos: Logos,
@@ -26,7 +27,6 @@ const registry = {
   ratecard: Ratecard,
   faq: Faq,
   cta: Cta,
-  contact: Contact,
 }
 
 export function SectionRenderer({ sections = landingSections }) {

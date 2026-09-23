@@ -12,13 +12,8 @@ export function WhyUs() {
       <Container className="relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
 
-          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12" data-reveal>
+          <div className="flex flex-col gap-6 sm:gap-8 lg:gap-12" data-gsap="left-far">
 
-            <div className="self-start">
-              <span className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-[999px] bg-[#FFFFFF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[3px_3px_0_0_#00104D] sm:shadow-[4px_4px_0_0_#00104D] font-montserrat font-bold text-xs sm:text-sm text-[#00104D] uppercase tracking-wide">
-                {isEn ? "Message From Founder" : "Pesan Dari Founder"}
-              </span>
-            </div>
 
             <div className="min-w-0">
               <h2 className="font-anton text-[clamp(2rem,9vw,4.5rem)] sm:text-[clamp(2.5rem,5vw,4.5rem)] text-[#FFFFFF] leading-[1.1] uppercase break-words" style={{ textShadow: '4px 4px 0px #00104D' }}>
@@ -48,7 +43,7 @@ export function WhyUs() {
 
           </div>
 
-          <div className="relative flex justify-center lg:justify-end mt-8 sm:mt-12 lg:mt-0" data-reveal>
+          <div className="relative flex justify-center lg:justify-end mt-8 sm:mt-12 lg:mt-0" data-gsap="right-far" data-gsap-delay="0.12">
 
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[110%] rounded-[50%] border-[2px] border-[#FFFFFF]/30 -rotate-12 pointer-events-none z-0 hidden sm:block"></div>
 

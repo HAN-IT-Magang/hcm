@@ -12,9 +12,9 @@ export function Process() {
         eyebrow={t('process.eyebrow')}
         title={t('process.title')}
       />
-      <Container className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <Container data-gsap-group="alternate" data-gsap-stagger="0.12" className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((s) => (
-          <div key={s.no} data-reveal className="rounded-3xl border p-6">
+          <div key={s.no} data-gsap-item="auto" className="rounded-3xl border p-6">
             <p className="text-3xl font-extrabold text-brand-600/20">{s.no}</p>
             <h3 className="mt-2 font-bold text-ink-900">{s.title}</h3>
             <p className="mt-2 text-sm text-ink-500">{s.desc}</p>

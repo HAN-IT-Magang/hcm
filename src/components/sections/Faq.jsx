@@ -9,46 +9,65 @@ export function Faq() {
   const items = t('faq.items', { returnObjects: true })
 
   return (
-    <section id="faq" className="scroll-mt-20 bg-[#FFD600] py-10 sm:py-20 lg:py-32 border-b-[3px] border-[#00104D] relative overflow-hidden">
+    <section id="faq" className="scroll-mt-20 bg-[#0030FF] py-20 lg:py-32 relative overflow-hidden">
 
-      <div className="absolute top-10 right-10 w-24 h-24 bg-[#FF2E93] rounded-full border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] opacity-20 pointer-events-none hidden md:block"></div>
-      <div className="absolute bottom-20 left-10 w-16 h-16 bg-[#00E0A4] rotate-45 border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] opacity-20 pointer-events-none hidden md:block"></div>
+      {/* Pattern: Starburst Top Left */}
+      <div className="absolute -top-20 -left-20 w-80 h-80 text-white/5 pointer-events-none -rotate-12">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 0 L55 40 L95 20 L65 50 L95 80 L55 60 L50 100 L45 60 L5 80 L35 50 L5 20 L45 40 Z" />
+        </svg>
+      </div>
+
+      {/* Pattern: Dotted Background Bottom Right */}
+      <div className="absolute -bottom-[20%] -right-[10%] w-[800px] h-[600px] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.1) 3px, transparent 4px)',
+          backgroundSize: '40px 40px',
+          maskImage: 'linear-gradient(to top left, rgba(0,0,0,1), rgba(0,0,0,0))'
+        }}
+      ></div>
 
       <Container className="relative z-10">
 
-        <div className="text-center mb-8 sm:mb-16 px-2" data-reveal>
-          <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-[999px] bg-[#FFFFFF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[3px_3px_0_0_#00104D] sm:shadow-[4px_4px_0_0_#00104D] font-montserrat font-bold text-xs sm:text-sm text-[#00104D] uppercase tracking-wide mb-4 sm:mb-6 -rotate-2 max-w-full">
+        <div className="text-center mb-16 px-2">
+          <div data-gsap="pop" className="inline-block px-5 py-2 bg-accent-magenta text-white font-sans font-bold text-sm uppercase tracking-widest mb-6 shadow-lg rotate-1">
             {t('faq.eyebrow')}
           </div>
-          <h2 className="font-anton text-[clamp(2rem,9vw,4.5rem)] sm:text-[clamp(2.5rem,5vw,4.5rem)] text-[#00104D] uppercase leading-none tracking-wide break-words" style={{ textShadow: '4px 4px 0px #FFFFFF' }}>
-            {t('faq.title')}
+          <h2 data-gsap="zoom" data-gsap-delay="0.08" className="font-sans text-[clamp(2.5rem,6vw,5rem)] font-black text-white uppercase leading-none tracking-tight">
+            {t('faq.title', 'FAQ')}
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4" data-reveal>
+        <div data-gsap-group="alternate" data-gsap-stagger="0.1" className="max-w-4xl mx-auto space-y-4">
           {Array.isArray(items) && items.map((f, i) => {
             const open = openIndex === i
             return (
               <div
                 key={i}
-                className={`overflow-hidden bg-[#FFFFFF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[6px_6px_0_0_#00104D] transition-all duration-300 ${open ? 'translate-x-[-2px] translate-y-[-2px] shadow-[6px_6px_0_0_#00104D] sm:shadow-[8px_8px_0_0_#00104D]' : ''}`}
+                data-gsap-item="auto"
+                className={`overflow-hidden bg-white shadow-[6px_6px_0_0_#05051a] transition-all duration-300 ${open ? '-translate-y-1 -translate-x-1 shadow-[10px_10px_0_0_#05051a]' : 'hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[8px_8px_0_0_#05051a]'}`}
               >
                 <button
                   onClick={() => setOpenIndex(open ? -1 : i)}
                   aria-expanded={open}
-                  className="flex w-full items-center justify-between gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 text-left font-montserrat font-bold text-[#00104D] bg-[#FFFFFF] hover:bg-[#EAF0FF] transition-colors duration-200"
+                  className="flex w-full items-center justify-between gap-4 p-5 md:p-6 text-left font-sans font-bold text-ink-900 bg-white transition-colors duration-200"
                 >
-                  <span className="text-[13px] sm:text-sm md:text-base leading-snug">{f.q}</span>
-                  <span className={cn('text-3xl font-anton transition-transform duration-300 flex-shrink-0 text-[#FF2E93]', open && 'rotate-45')}>+</span>
+                  <span className="text-lg md:text-xl leading-snug">{f.q}</span>
+                  <span className={cn('text-3xl font-black transition-transform duration-300 flex-shrink-0 text-accent-magenta', open && 'rotate-45')}>+</span>
                 </button>
 
-                {open && (
-                  <div className="bg-[#FFFFFF]">
-                    <p className="px-4 sm:px-5 md:px-6 pb-5 sm:pb-6 text-[13px] sm:text-sm md:text-[15px] font-montserrat font-medium text-[#00104D] leading-relaxed opacity-90 border-t-[2px] sm:border-t-[3px] border-[#00104D] pt-3 sm:pt-4 mx-2">
+                <div
+                  className={cn(
+                    "grid transition-all duration-300 ease-in-out bg-white border-t-2 border-brand-100",
+                    open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 border-t-0"
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <p className="p-5 md:p-6 text-base md:text-lg font-sans font-medium text-ink-700 leading-relaxed">
                       {f.a}
                     </p>
                   </div>
-                )}
+                </div>
               </div>
             )
           })}

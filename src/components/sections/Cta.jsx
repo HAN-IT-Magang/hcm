@@ -11,7 +11,7 @@ export function Cta() {
     <section className="bg-white py-16 sm:py-20">
       <Container>
         <div
-          data-reveal
+          data-gsap="zoom"
           className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-600 via-ink-900 to-fuchsia-700 px-8 py-14 text-center text-white sm:px-16"
         >
           <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />

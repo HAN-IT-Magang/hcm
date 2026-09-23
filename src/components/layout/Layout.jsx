@@ -1,11 +1,11 @@
-import { useReveal } from '@/hooks/useReveal'
+import { useGsapReveal } from '@/hooks/useGsapReveal'
 import { useSeo } from '@/hooks/useSeo'
 import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 import { FloatingWhatsApp } from '../ui/FloatingWhatsApp'
 
 export function Layout({ children }) {
-  useReveal()
+  useGsapReveal()
   useSeo()
   return (
     <div className="min-h-screen bg-white flex flex-col">

@@ -1,18 +1,8 @@
 {
   "nav": [
-    {
-      "label": "Layanan",
-      "href": "#layanan",
-      "children": [
-        { "label": "Marketplace Management", "href": "#layanan" },
-        { "label": "Affiliator Management", "href": "#layanan" },
-        { "label": "Ads Management", "href": "#layanan" },
-        { "label": "Live Streaming & Content", "href": "#layanan" }
-      ]
-    },
-    { "label": "Tentang Kami", "href": "#about" },
-    { "label": "Kenapa HCM", "href": "#why-us" },
-    { "label": "Portofolio", "href": "#portofolio" },
+    { "label": "Tentang HCM", "href": "#about" },
+    { "label": "Layanan", "href": "#services" },
+    { "label": "Klien", "href": "#logos" },
     { "label": "FAQ", "href": "#faq" },
     { "label": "Kontak", "href": "#kontak" }
   ],

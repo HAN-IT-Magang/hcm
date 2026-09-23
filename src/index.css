@@ -2,16 +2,27 @@
 
 @theme {
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-anton: "Anton", sans-serif;
-  --font-montserrat: "Montserrat", sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-anton: "Plus Jakarta Sans", sans-serif;
+  /* fallback for old references */
+  --font-montserrat: "Plus Jakarta Sans", sans-serif;
+  /* fallback for old references */
 
+  /* Vivid Blue Gradient Base */
   --color-brand-50: #eef4ff;
   --color-brand-100: #dbe6fe;
-  --color-brand-500: #4f46e5;
-  --color-brand-600: #4338ca;
-  --color-brand-700: #3730a3;
-  --color-ink-900: #0b0b14;
-  --color-ink-700: #2a2a3a;
+  --color-brand-500: #1a56ff;
+  --color-brand-600: #0d44e5;
+  --color-brand-700: #0033cc;
+
+  /* Accent Colors */
+  --color-accent-magenta: #ff007f;
+  --color-accent-cyan: #00d0ff;
+  --color-accent-lime: #adff00;
+  --color-accent-yellow: #ffd600;
+
+  --color-ink-900: #05051a;
+  --color-ink-700: #1a1a3a;
   --color-ink-500: #5b5b72;
 
   --animate-float: float 6s ease-in-out infinite;
@@ -50,6 +61,7 @@ body {
 }
 
 @supports not (overflow: clip) {
+
   html,
   body {
     overflow-x: hidden;
@@ -64,16 +76,11 @@ body {
   @apply bg-white text-ink-700 font-sans antialiased;
 }
 
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-[data-reveal].is-visible {
-  opacity: 1;
-  transform: none;
-}
+/* Reveal & motion ditangani penuh oleh GSAP (useGsapReveal).
+   Tidak ada animasi CSS/Tailwind untuk entrance — dilarang tambah
+   transition/animate-* untuk [data-gsap].
+   (will-change sengaja TIDAK dipasang permanen; GSAP mengaturnya
+   otomatis hanya selama tween berjalan.) */
 
 html,
 body {

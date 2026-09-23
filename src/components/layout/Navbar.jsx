@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import logoHan from '@/assets/2-bg.transparant.png'
+import logoHanWhite from '@/assets/4-bg.transparant.png'
 import { siteConfig } from '@/config/site'
-import { LanguageToggle } from '../ui/LanguageToggle'
 
 function Chevron({ open }) {
   return (
@@ -26,8 +25,17 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [openDrop, setOpenDrop] = useState(null)
   const [mobileExpanded, setMobileExpanded] = useState(null)
+  const [scrolled, setScrolled] = useState(false)
 
   const nav = t('nav', { returnObjects: true })
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const onKey = (e) => {
@@ -43,18 +51,29 @@ export function Navbar() {
   const waUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(waMessage)}`
 
   return (
-    <header className="sticky top-0 z-50 border-b-[3px] border-[#00104D] bg-[#FFFFFF]">
-      <nav className="mx-auto flex h-16 sm:h-20 sm:h-[88px] w-full max-w-7xl items-center justify-between gap-4 sm:gap-6 px-4 sm:px-8">
+    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#00104D] shadow-md border-b border-white/10' : 'bg-transparent border-b border-transparent'}`}>
+      <nav className="mx-auto flex h-[72px] lg:h-[80px] w-full max-w-[1400px] items-center justify-between px-4 lg:px-8">
 
-        <Link to="/" className="flex shrink-0 items-center gap-3 hover:-rotate-2 hover:scale-105 transition-all duration-300 origin-left" aria-label="HAN Creative Marketing - Home">
-          <img
-            src={logoHan}
-            alt="HAN Creative Marketing (HCM)"
-            className="h-9 sm:h-14 lg:h-16 w-auto object-contain drop-shadow-sm"
-          />
-        </Link>
+        {/* Left: Logo & Brand Name */}
+        <div className="flex shrink-0 items-center gap-4">
+          <Link to="/" className="flex items-center gap-4 group" aria-label="HAN Creative Marketing - Home">
+            <img
+              src={logoHanWhite}
+              alt="HAN Creative Marketing (HCM)"
+              className="h-8 lg:h-10 w-auto object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+            <div className="hidden sm:flex items-center gap-4">
+              <span className="h-8 w-px bg-white/30"></span>
+              <div className="flex flex-col">
+                <span className="font-sans text-[13px] font-bold text-white tracking-wide uppercase leading-tight">HAN Creative Marketing</span>
+                <span className="font-sans text-[11px] font-medium text-white/70 tracking-widest uppercase leading-tight">Your Growth Partner</span>
+              </div>
+            </div>
+          </Link>
+        </div>
 
-        <div className="hidden min-w-0 flex-1 items-center justify-center gap-7 lg:flex">
+        {/* Center: Navigation Links */}
+        <div className="hidden lg:flex flex-1 items-center justify-center gap-8 px-4">
           {Array.isArray(nav) && nav.map((item) =>
             item.children ? (
               <div
@@ -65,22 +84,20 @@ export function Navbar() {
               >
                 <button
                   onClick={() => setOpenDrop((v) => (v === item.label ? null : item.label))}
-                  aria-expanded={openDrop === item.label}
-                  className="group relative flex items-center gap-1.5 py-2 font-montserrat font-bold text-sm text-[#00104D] uppercase tracking-wider transition-colors hover:text-[#0030FF] cursor-pointer"
+                  className="flex items-center gap-1.5 py-2 font-montserrat text-[13px] font-bold uppercase tracking-wider text-white/90 transition-colors hover:text-white"
                 >
                   {item.label}
                   <Chevron open={openDrop === item.label} />
-                  <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#0030FF] transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 {openDrop === item.label && (
-                  <div className="absolute left-0 top-full w-64 pt-2">
-                    <div className="overflow-hidden rounded-xl border-[3px] border-[#00104D] bg-[#FFFFFF] p-2 shadow-[6px_6px_0_0_#00104D]">
+                  <div className="absolute left-0 top-full pt-2">
+                    <div className="min-w-[200px] rounded-lg border border-white/10 bg-[#00104D] p-2 shadow-xl">
                       {item.children.map((child) => (
                         <a
                           key={child.label}
                           href={child.href}
                           onClick={() => setOpenDrop(null)}
-                          className="block rounded-lg px-4 py-2.5 font-montserrat font-bold text-xs text-[#00104D] uppercase tracking-wide transition-all duration-200 hover:bg-[#EAF0FF] hover:text-[#0030FF] hover:translate-x-1"
+                          className="block rounded-md px-4 py-2.5 font-montserrat text-xs font-bold uppercase tracking-wider text-white/80 transition-colors hover:bg-white/10 hover:text-white"
                         >
                           {child.label}
                         </a>
@@ -93,62 +110,80 @@ export function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="group relative py-2 font-montserrat font-bold text-sm text-[#00104D] uppercase tracking-wider transition-colors hover:text-[#FF2E93]"
+                className="py-2 font-montserrat text-[13px] font-bold uppercase tracking-wider text-white/90 transition-colors hover:text-white"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#FF2E93] transition-all duration-300 group-hover:w-full"></span>
               </a>
             ),
           )}
         </div>
 
-        <div className="hidden shrink-0 items-center gap-6 lg:flex">
+        {/* Right: CTA & Language */}
+        <div className="hidden lg:flex shrink-0 items-center gap-6">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => i18n.changeLanguage('id')}
+              className={`font-montserrat text-[12px] font-bold uppercase tracking-wider transition-colors ${!isEn ? 'text-white' : 'text-white/40 hover:text-white/80'
+                }`}
+            >
+              ID
+            </button>
+            <span className="text-white/20">/</span>
+            <button
+              onClick={() => i18n.changeLanguage('en')}
+              className={`font-montserrat text-[12px] font-bold uppercase tracking-wider transition-colors ${isEn ? 'text-white' : 'text-white/40 hover:text-white/80'
+                }`}
+            >
+              EN
+            </button>
+          </div>
+
           <a
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-[999px] bg-[#FFD600] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#00104D] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none px-6 py-2.5 font-montserrat font-bold text-sm text-[#00104D] uppercase tracking-wide transition-all duration-200 cursor-pointer overflow-hidden relative"
+            className="flex items-center gap-3 bg-[#FF1E8F] px-6 py-3 font-montserrat text-[12px] font-bold uppercase tracking-widest text-white shadow-lg transition-all hover:shadow-xl hover:-translate-y-1"
           >
-            <span className="absolute inset-0 -translate-x-full bg-white/40 skew-x-[30deg] transition-transform duration-500 group-hover:translate-x-[150%]"></span>
-
-            <span className="relative z-10">{isEn ? 'Scale Your Brand' : 'Mulai Scale Brand'}</span>
-            <svg className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+            {isEn ? 'Scale Your Brand' : 'Scale Your Brand'}
+            <span className="text-lg leading-none font-black text-white">+</span>
           </a>
-          <LanguageToggle />
         </div>
 
+        {/* Mobile Toggle */}
         <button
-          className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-[10px] border-[2px] sm:border-[3px] border-[#00104D] bg-[#FFFFFF] shadow-[3px_3px_0_0_#00104D] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-base sm:text-lg text-[#00104D] lg:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/20 text-white lg:hidden"
           onClick={() => setMobileOpen((v) => !v)}
-          aria-label="Toggle menu"
-          aria-expanded={mobileOpen}
         >
-          {mobileOpen ? '✕' : '☰'}
+          {mobileOpen ? (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+          ) : (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          )}
         </button>
       </nav>
 
+      {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="border-t-[2px] sm:border-t-[3px] border-[#00104D] bg-white px-4 sm:px-5 py-3 sm:py-4 lg:hidden max-h-[calc(100dvh-4rem)] sm:max-h-[calc(100dvh-5rem)] overflow-y-auto">
+        <div className="absolute inset-x-0 top-full border-t border-white/10 bg-[#00104D] px-4 py-4 lg:hidden shadow-xl">
           <div className="flex flex-col">
             {Array.isArray(nav) && nav.map((item) =>
               item.children ? (
-                <div key={item.label} className="border-b border-black/5 last:border-0">
+                <div key={item.label} className="border-b border-white/10 last:border-0">
                   <button
                     onClick={() => setMobileExpanded((v) => (v === item.label ? null : item.label))}
-                    aria-expanded={mobileExpanded === item.label}
-                    className="flex w-full items-center justify-between py-3 text-sm font-semibold text-neutral-900"
+                    className="flex w-full items-center justify-between py-4 font-montserrat text-sm font-bold uppercase tracking-wider text-white"
                   >
                     {item.label}
                     <Chevron open={mobileExpanded === item.label} />
                   </button>
                   {mobileExpanded === item.label && (
-                    <div className="pb-3 pl-3">
+                    <div className="pb-4 pl-4">
                       {item.children.map((child) => (
                         <a
                           key={child.label}
                           href={child.href}
                           onClick={() => setMobileOpen(false)}
-                          className="block py-2.5 text-sm text-neutral-600 hover:text-[#0030ff]"
+                          className="block py-2 font-montserrat text-xs font-bold uppercase tracking-wider text-white/70 transition-colors hover:text-white"
                         >
                           {child.label}
                         </a>
@@ -161,23 +196,42 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="border-b border-black/5 py-3 text-sm font-semibold text-neutral-900 hover:text-[#0030ff] last:border-0"
+                  className="border-b border-white/10 py-4 font-montserrat text-sm font-bold uppercase tracking-wider text-white transition-colors hover:text-white last:border-0"
                 >
                   {item.label}
                 </a>
               ),
             )}
-            <div className="flex items-center gap-4 pt-6 pb-2">
+
+            <div className="mt-6 flex flex-col gap-6">
               <a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex-1 rounded-[999px] bg-[#FFD600] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] active:translate-y-1 active:shadow-none px-5 py-3 text-center font-montserrat font-bold text-sm text-[#00104D] uppercase tracking-wide transition-all"
+                className="flex w-full items-center justify-center gap-3 bg-[#FF1E8F] py-3.5 text-center font-montserrat text-sm font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:shadow-xl hover:-translate-y-1"
               >
-                {isEn ? 'Scale Your Brand' : 'Mulai Scale Brand'}
+                {isEn ? 'Scale Your Brand' : 'Scale Your Brand'}
+                <span className="text-xl leading-none font-black text-white">+</span>
               </a>
-              <LanguageToggle />
+
+              <div className="flex items-center justify-center gap-4">
+                <button
+                  onClick={() => { i18n.changeLanguage('id'); setMobileOpen(false); }}
+                  className={`font-montserrat text-[13px] font-bold uppercase tracking-wider transition-colors ${!isEn ? 'text-white' : 'text-white/40'
+                    }`}
+                >
+                  ID
+                </button>
+                <span className="text-white/20">/</span>
+                <button
+                  onClick={() => { i18n.changeLanguage('en'); setMobileOpen(false); }}
+                  className={`font-montserrat text-[13px] font-bold uppercase tracking-wider transition-colors ${isEn ? 'text-white' : 'text-white/40'
+                    }`}
+                >
+                  EN
+                </button>
+              </div>
             </div>
           </div>
         </div>

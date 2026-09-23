@@ -94,7 +94,7 @@ export function Ratecard() {
 
       <Container>
 
-        <div className="mb-12 sm:mb-20 lg:mb-24" data-reveal>
+        <div className="mb-12 sm:mb-20 lg:mb-24" data-gsap="zoom">
           <div className="text-center mb-8 sm:mb-12 px-2">
             <h2 className="font-anton text-3xl sm:text-5xl md:text-7xl text-[#00104D] uppercase mb-3 sm:mb-4 break-words" style={{ WebkitTextStroke: '1px #00104D', textShadow: '4px 4px 0px #00E0A4' }}>Scope of Works</h2>
             <p className="font-montserrat font-bold text-base sm:text-xl text-[#00104D] uppercase tracking-widest">{isEn ? "Our Expertise" : "Keahlian Kami"}</p>
@@ -112,9 +112,9 @@ export function Ratecard() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-12 mb-12 sm:mb-24 lg:mb-32 min-w-0" data-reveal>
+        <div data-gsap-group="alternate-far" data-gsap-stagger="0.15" className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 lg:gap-12 mb-12 sm:mb-24 lg:mb-32 min-w-0" >
 
-          <div className="bg-[#FFD600] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[12px_12px_0_0_#00104D] p-5 sm:p-10 rotate-0 sm:-rotate-1 min-w-0">
+          <div data-gsap-item="auto" className="bg-[#FFD600] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[12px_12px_0_0_#00104D] p-5 sm:p-10 rotate-0 sm:-rotate-1 min-w-0">
             <div className="mb-6 sm:mb-8 border-b-[2px] sm:border-b-[3px] border-[#00104D] pb-4 sm:pb-6">
               <h3 className="font-anton text-3xl sm:text-4xl text-[#00104D] uppercase mb-2 break-words">Ratecard <span className="text-[#00E0A4]" style={{ WebkitTextStroke: '1.5px #00104D', textShadow: '2px 2px 0px #00104D' }}>MPA</span></h3>
               <p className="font-['Bebas_Neue',_sans-serif] text-3xl sm:text-4xl text-[#0030FF]">Aset digital</p>
@@ -137,7 +137,7 @@ export function Ratecard() {
             </div>
           </div>
 
-          <div className="bg-[#00E0A4] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[12px_12px_0_0_#00104D] p-5 sm:p-10 rotate-0 sm:rotate-1 min-w-0">
+          <div data-gsap-item="auto" className="bg-[#00E0A4] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[12px_12px_0_0_#00104D] p-5 sm:p-10 rotate-0 sm:rotate-1 min-w-0">
             <div className="mb-6 sm:mb-8 border-b-[2px] sm:border-b-[3px] border-[#00104D] pb-4 sm:pb-6">
               <h3 className="font-anton text-3xl sm:text-4xl text-[#00104D] uppercase mb-2 break-words">Ratecard <span className="text-[#FF2E93]" style={{ WebkitTextStroke: '1.5px #00104D', textShadow: '2px 2px 0px #00104D' }}>Monthly</span></h3>
               <p className="font-['Bebas_Neue',_sans-serif] text-3xl sm:text-4xl text-[#0030FF]">Management</p>
@@ -162,7 +162,7 @@ export function Ratecard() {
 
         </div>
 
-        <div className="bg-[#0030FF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[16px_16px_0_0_#00104D] p-5 sm:p-12 min-w-0" data-reveal>
+        <div data-gsap="zoom" className="bg-[#0030FF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[16px_16px_0_0_#00104D] p-5 sm:p-12 min-w-0" >
           <div className="mb-8 sm:mb-12">
             <h2 className="font-anton text-3xl sm:text-5xl md:text-7xl text-[#FFFFFF] uppercase break-words" style={{ textShadow: '4px 4px 0px #00104D' }}>Marketplace <span className="text-[#C6FF00]">MPO</span></h2>
             <p className="font-['Bebas_Neue',_sans-serif] text-2xl sm:text-4xl md:text-5xl text-[#00E0A4]">Optimization</p>

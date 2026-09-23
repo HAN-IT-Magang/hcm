@@ -1,18 +1,8 @@
 {
   "nav": [
-    {
-      "label": "Services",
-      "href": "#layanan",
-      "children": [
-        { "label": "Marketplace Management", "href": "#layanan" },
-        { "label": "Affiliator Management", "href": "#layanan" },
-        { "label": "Ads Management", "href": "#layanan" },
-        { "label": "Live Streaming & Content", "href": "#layanan" }
-      ]
-    },
-    { "label": "About Us", "href": "#about" },
-    { "label": "Why HCM", "href": "#why-us" },
-    { "label": "Case Studies", "href": "#portofolio" },
+    { "label": "About HCM", "href": "#about" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Clients", "href": "#logos" },
     { "label": "FAQ", "href": "#faq" },
     { "label": "Contact", "href": "#kontak" }
   ],

@@ -1,67 +1,83 @@
-import { useTranslation } from 'react-i18next'
 import { Container } from '../ui/Container'
+import clientImg from '../../assets/fotoorang/Contents (4) - Copy.png'
 
 export function Logos() {
-  const { t } = useTranslation()
-
   const clients = [
-    { name: 'SLAVINA', font: 'font-montserrat font-bold uppercase tracking-[0.2em]' },
+    { name: 'SLAVINA', font: 'font-sans font-bold uppercase tracking-[0.2em]' },
     { name: 'HANASUI', font: 'font-sans font-light uppercase tracking-widest' },
-    { name: 'LABORÉ', font: 'font-montserrat font-medium uppercase tracking-widest' },
-    { name: 'Vitalis', font: 'font-serif italic font-bold' },
-    { name: 'TAKARA', font: 'font-anton uppercase tracking-widest' },
-    { name: 'takeda', font: 'font-sans lowercase text-xl' },
-    { name: 'Natura Grow', font: 'font-montserrat font-bold' },
-    { name: 'Benih Seribuan', font: 'font-serif' },
-    { name: 'PlantyGrow', font: 'font-montserrat font-bold' },
-    { name: 'Wua Yoou', font: 'font-serif italic' },
-    { name: 'PATRA BAG', font: 'font-anton uppercase' },
+    { name: 'LABORÉ', font: 'font-sans font-medium uppercase tracking-widest' },
+    { name: 'Vitalis', font: 'font-serif italic font-bold text-xl' },
+    { name: 'TAKARA', font: 'font-sans font-bold uppercase tracking-widest text-xl' },
+    { name: 'takeda', font: 'font-sans lowercase text-2xl' },
+    { name: 'Natura Grow', font: 'font-sans font-bold text-lg' },
+    { name: 'Benih Seribuan', font: 'font-serif text-lg' },
+    { name: 'PlantyGrow', font: 'font-sans font-bold text-lg' },
+    { name: 'Wua Yoou', font: 'font-serif italic text-xl' },
+    { name: 'PATRA BAG', font: 'font-sans font-bold uppercase text-lg' },
     { name: 'cheapywfx', font: 'font-sans lowercase font-bold tracking-tighter' },
-    { name: 'ABOVEBOARD', font: 'font-anton uppercase text-2xl' },
-    { name: 'Print.House', font: 'font-sans font-medium' },
-    { name: 'SINEURO', font: 'font-anton uppercase text-xl' },
-    { name: 'Amelia Kids', font: 'font-serif italic font-bold text-lg' },
-    { name: 'HBU', font: 'font-montserrat font-bold text-2xl' },
-    { name: 'Raraya Scarf', font: 'font-serif' },
-    { name: 'KP', font: 'font-anton text-3xl' },
-    { name: 'CUDDLE & CO', font: 'font-montserrat font-bold uppercase tracking-widest' },
+    { name: 'ABOVEBOARD', font: 'font-sans font-black uppercase text-xl' },
+    { name: 'Print.House', font: 'font-sans font-medium text-lg' },
+    { name: 'SINEURO', font: 'font-sans font-black uppercase text-2xl' },
+    { name: 'Amelia Kids', font: 'font-serif italic font-bold text-xl' },
+    { name: 'HBU', font: 'font-sans font-bold text-3xl' },
+    { name: 'Raraya Scarf', font: 'font-serif text-xl' },
+    { name: 'CUDDLE & CO', font: 'font-sans font-bold uppercase tracking-widest' },
   ]
 
   return (
-    <section id="logos" className="relative z-10 bg-[#0030FF] pt-10 sm:pt-16 lg:pt-24 pb-12 sm:pb-20 lg:pb-32 border-b-[3px] border-[#00104D] overflow-hidden">
-      <Container>
+    <section id="logos" className="relative z-10 bg-gradient-to-br from-[#1C4BFF] to-[#0030FF] pt-20 pb-24 overflow-hidden">
+      
+      {/* Right side cutout and "Our Clients" Badge — panel dari kanan jauh */}
+      <div data-gsap="right-far" className="hidden lg:block absolute top-0 right-0 h-full w-1/3 bg-white z-0 rounded-l-[100px] shadow-2xl">
+        <div className="absolute top-20 -left-12 flex flex-col items-end z-30">
+          <div className="bg-brand-500 text-white font-sans font-bold text-5xl py-2 px-6 -mb-4 z-10 shadow-lg">Our</div>
+          <div className="bg-brand-100 text-brand-600 font-sans font-bold text-5xl py-2 px-6 shadow-lg">Clients</div>
+        </div>
+        
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-accent-magenta rounded-full blur-[80px] opacity-20 pointer-events-none" />
+        
+        {/* The requested photo, pasted inside the white area */}
+        <img 
+          src={clientImg} 
+          alt="Our Clients Team" 
+          className="absolute -bottom-8 right-10 w-[120%] max-w-none h-auto object-contain object-bottom drop-shadow-2xl z-20"
+        />
+      </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 md:mb-20 text-center px-2" data-reveal>
-          <h2 className="font-anton text-5xl sm:text-7xl md:text-9xl text-[#FFFFFF] leading-none" style={{ textShadow: '6px 6px 0px #00104D' }}>
-            100+
-          </h2>
-          <div className="border-[3px] sm:border-[4px] border-[#FF2E93] px-4 sm:px-6 py-1.5 sm:py-2 shadow-[4px_4px_0_0_#FF2E93] sm:shadow-[8px_8px_0_0_#FF2E93] rotate-0 sm:-rotate-2 sm:hover:rotate-0 hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0_0_#FF2E93] transition-all duration-300 max-w-full">
-            <h2 className="font-anton text-2xl sm:text-4xl md:text-6xl text-[#FFFFFF] leading-none uppercase">
-              {t('logos.satisfiedLine1')}
-              <br />
-              {t('logos.satisfiedLine2')}
+      <Container className="relative z-10">
+        
+        <div className="lg:w-2/3">
+          {/* Header — angka dari kiri jauh, teks dari kanan */}
+          <div className="flex flex-col md:flex-row items-baseline gap-6 mb-12">
+            <h2 data-gsap="left-far" className="font-sans font-bold text-7xl md:text-9xl text-white leading-none">
+              100+
             </h2>
-          </div>
-        </div>
-
-        <div className="w-full max-w-4xl mx-auto h-[2px] sm:h-[3px] bg-[#FFFFFF] mb-10 sm:mb-12 md:mb-20 opacity-50"></div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-8 md:gap-12 items-center justify-items-center px-2" data-reveal>
-          {clients.map((client, idx) => (
-            <div
-              key={idx}
-              className={`text-[#FFFFFF] text-center hover:scale-110 hover:text-[#00E0A4] transition-all duration-300 cursor-default min-w-0 max-w-full break-words leading-tight max-sm:text-sm ${client.font}`}
-            >
-              {client.name}
+            <div data-gsap="right" data-gsap-delay="0.12" className="border-t-4 border-white/50 pt-4 flex-1">
+              <h2 className="font-sans font-light text-3xl md:text-5xl text-white leading-tight uppercase tracking-wide">
+                Clients<br/><span className="font-bold">Satisfied</span>
+              </h2>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="mt-12 flex justify-center" data-reveal>
-          <div className="bg-[#FFFFFF] border-[2px] sm:border-[3px] border-[#00104D] px-5 sm:px-6 py-2.5 sm:py-3 shadow-[4px_4px_0_0_#00104D] sm:shadow-[6px_6px_0_0_#00104D] hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#00104D] transition-all duration-300 cursor-pointer">
-            <span className="font-montserrat font-bold text-lg text-[#0030FF] uppercase tracking-wider">
-              {t('logos.more')}
-            </span>
+          {/* Grid — stagger zoom */}
+          <div data-gsap-group="stagger" data-gsap-stagger="0.06" className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center mb-16 relative z-10">
+            {clients.map((client, idx) => (
+              <div
+                key={idx}
+                data-gsap-item="zoom"
+                className={`text-white text-center hover:scale-110 transition-transform duration-300 cursor-default ${client.font}`}
+              >
+                {client.name}
+              </div>
+            ))}
+          </div>
+
+          {/* Button — pop */}
+          <div data-gsap="pop" className="flex justify-center md:justify-start">
+            <button className="flex items-center gap-4 bg-white text-[#0030FF] font-sans font-bold text-lg px-6 py-3 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+              add more. 
+              <span className="text-2xl leading-none font-black text-[#1C4BFF]">+</span>
+            </button>
           </div>
         </div>
 

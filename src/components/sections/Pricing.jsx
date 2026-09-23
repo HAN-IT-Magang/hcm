@@ -15,11 +15,11 @@ export function Pricing() {
         title={t('pricing.title')}
         subtitle={t('pricing.subtitle')}
       />
-      <Container className="grid items-stretch gap-5 lg:grid-cols-3">
+      <Container data-gsap-group="alternate" data-gsap-stagger="0.12" className="grid items-stretch gap-5 lg:grid-cols-3">
         {items.map((p) => (
           <article
             key={p.name}
-            data-reveal
+            data-gsap-item="auto"
             className={cn(
               'flex flex-col rounded-3xl border p-7',
               p.featured ? 'border-brand-600 bg-ink-900 text-white shadow-2xl' : 'bg-white',

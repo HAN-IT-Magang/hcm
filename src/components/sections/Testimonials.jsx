@@ -13,9 +13,9 @@ export function Testimonials() {
         title={t('testimonials.title')}
         dark
       />
-      <Container className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <Container data-gsap-group="alternate" data-gsap-stagger="0.12" className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
-          <figure key={item.name} data-reveal className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
+          <figure key={item.name} data-gsap-item="auto" className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
             <div className="text-yellow-400">★★★★★</div>
             <blockquote className="mt-3 text-sm leading-relaxed text-white/85">“{item.quote}”</blockquote>
             <figcaption className="mt-5 flex items-center gap-3">
