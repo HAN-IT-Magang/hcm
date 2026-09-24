@@ -45,7 +45,7 @@ export function Hero() {
             </h2>
           </div>
           <div data-gsap="clip-right" data-gsap-hero="5">
-            <h2 className="text-white/90 font-sans font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wide text-center">
+            <h2 className="text-white/90 font-sans font-medium text-xl sm:text-2xl md:text-2xl lg:text-3xl tracking-wide text-center">
               {isEn ? "Your Growth Partner" : "Your Growth Partner"}
             </h2>
           </div>
