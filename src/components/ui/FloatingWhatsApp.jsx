@@ -32,7 +32,7 @@ export function FloatingWhatsApp() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div 
+        <motion.div
           className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-4"
           initial={{ y: -100, opacity: 0 }} // "Jatuh dari atas"
           animate={{ y: 0, opacity: 1 }}
@@ -40,9 +40,8 @@ export function FloatingWhatsApp() {
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
           <div
-            className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FFFFFF] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] text-[#00104D] text-xs font-montserrat font-bold uppercase tracking-wide transition-all duration-300 ${
-              hovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
-            }`}
+            className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FFFFFF] border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] text-[#00104D] text-xs font-montserrat font-bold uppercase tracking-wide transition-all duration-300 ${hovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
+              }`}
           >
             <span className="w-3 h-3 rounded-full bg-[#25D366] border-2 border-[#00104D] animate-pulse" />
             <span>{isEn ? 'Chat with HCM Growth Team' : 'Konsultasi Gratis di WhatsApp'}</span>

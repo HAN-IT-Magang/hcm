@@ -1,12 +1,15 @@
 import { Container } from '../ui/Container'
 
 const services = [
-  { id: '01', title: 'Marketplace\nActivation\n(MPA)' },
-  { id: '02', title: 'Marketplace\nOptimization\n(MPO)' },
-  { id: '03', title: 'Ads\nManagement' },
-  { id: '04', title: 'Affiliator\nManagement' },
-  { id: '05', title: 'Digital Visual\nAsset' },
-  { id: '06', title: 'Bedah\nBrand (Free)' },
+  { id: '01', title: 'Live Stream' },
+  { id: '02', title: 'Social Media' },
+  { id: '03', title: 'Marketplace' },
+  { id: '04', title: 'Ads' },
+  { id: '05', title: 'Affiliate & KOL' },
+  { id: '06', title: 'CRM & CS' },
+  { id: '07', title: 'Shoppable\nContent' },
+  { id: '08', title: 'Photo & Video' },
+  { id: '09', title: 'Graphic\nDesign' },
 ]
 
 export function Services() {

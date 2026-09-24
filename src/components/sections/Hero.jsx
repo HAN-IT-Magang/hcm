@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '../ui/Container'
 import { siteConfig } from '@/config/site'
+import hanLogo from '../../assets/2-bg.transparant.png'
 
 export function Hero() {
   const { i18n } = useTranslation()
@@ -12,7 +13,7 @@ export function Hero() {
   const waUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(waMessage)}`
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-gradient-to-br from-brand-600 via-brand-500 to-accent-cyan overflow-hidden pt-20">
+    <section className="relative min-h-screen flex flex-col justify-center bg-gradient-to-br from-brand-600 via-brand-500 to-accent-cyan overflow-hidden pt-32">
 
       {/* Abstract Background Shapes — 2 garis bleed melewati layar */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -25,37 +26,33 @@ export function Hero() {
 
       <Container className="relative z-10 flex-1 flex flex-col items-center justify-center text-center">
 
-        {/* Main Logo Text "HAN" — H dari kiri jauh, A pop tengah, N dari kanan jauh */}
-        <div className="relative mb-6">
-          <h1 className="font-sans font-black text-[150px] md:text-[250px] leading-none tracking-tighter text-white drop-shadow-2xl flex items-center justify-center">
-            <span data-gsap="left-far" data-gsap-hero="0" className="bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-200" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.8)' }}>H</span>
-            <span data-gsap="pop" data-gsap-hero="1" className="bg-clip-text text-transparent bg-gradient-to-b from-brand-500 to-brand-700 -ml-8 md:-ml-16 z-10" style={{ WebkitTextStroke: '3px white' }}>A</span>
-            <span data-gsap="right-far" data-gsap-hero="2" className="bg-clip-text text-transparent bg-gradient-to-b from-brand-600 to-brand-700 -ml-8 md:-ml-16" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.8)' }}>N</span>
-          </h1>
-
-          {/* Creative Marketing Badge — pop tengah */}
-          <div data-gsap="pop" data-gsap-hero="3" className="absolute bottom-0 md:-bottom-4 left-1/2 -translate-x-1/2 bg-white px-6 py-2 md:px-8 md:py-3 shadow-xl flex items-center gap-2">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-accent-magenta font-sans font-extrabold text-2xl md:text-5xl tracking-tight">Creative</span>
-            <span className="text-brand-600 font-sans font-light text-2xl md:text-5xl tracking-tight">Marketing</span>
-          </div>
+        {/* Main Logo Image "HAN" */}
+        <div className="relative mb-6 flex justify-center items-center">
+          <img 
+            data-gsap="zoom"
+            data-gsap-hero="0"
+            src={hanLogo} 
+            alt="HAN" 
+            className="w-auto h-[140px] md:h-[235px] lg:h-[285px] object-contain drop-shadow-2xl" 
+          />
         </div>
 
-        {/* Subtitle Box — kiri dari kiri (clip), kanan dari kanan (clip) */}
-        <div className="mt-16 md:mt-24 grid grid-cols-2 bg-transparent border-t-2 border-white/30 w-full max-w-4xl">
-          <div data-gsap="clip-left" data-gsap-hero="4" className="border-r-2 border-white/30 p-4 md:p-8 text-right">
-            <h2 className="text-white font-sans font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight">
+        {/* Subtitle Box — Stacked */}
+        <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-1 md:gap-2 bg-transparent border-t-2 border-white/30 w-full max-w-4xl pt-6 md:pt-10">
+          <div data-gsap="clip-left" data-gsap-hero="4">
+            <h2 className="text-white font-sans font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl tracking-tight text-center">
               {isEn ? "E-Commerce" : "E-Commerce"}
             </h2>
           </div>
-          <div data-gsap="clip-right" data-gsap-hero="5" className="p-4 md:p-8 text-left">
-            <h2 className="text-white font-sans font-bold text-3xl md:text-5xl lg:text-6xl tracking-tight">
-              {isEn ? "Growth Partner" : "Growth Partner"}
+          <div data-gsap="clip-right" data-gsap-hero="5">
+            <h2 className="text-white/90 font-sans font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wide text-center">
+              {isEn ? "Your Growth Partner" : "Your Growth Partner"}
             </h2>
           </div>
         </div>
 
         {/* CTA Button — zoom tengah */}
-        <div data-gsap="zoom" data-gsap-hero="6" className="mt-12 mb-20">
+        <div data-gsap="zoom" data-gsap-hero="6" className="mt-10 mb-8 md:mb-12">
           <a
             href={waUrl}
             target="_blank"
