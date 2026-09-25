@@ -39,11 +39,6 @@ export function Hero() {
 
         {/* Subtitle Box — Stacked */}
         <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-1 md:gap-2 bg-transparent border-t-2 border-white/30 w-full max-w-4xl pt-6 md:pt-10">
-          <div data-gsap="clip-left" data-gsap-hero="4">
-            <h2 className="text-white font-sans font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl tracking-tight text-center">
-              {isEn ? "E-Commerce" : "E-Commerce"}
-            </h2>
-          </div>
           <div data-gsap="clip-right" data-gsap-hero="5">
             <h2 className="text-white/90 font-sans font-medium text-xl sm:text-2xl md:text-2xl lg:text-3xl tracking-wide text-center">
               {isEn ? "Your Growth Partner" : "Your Growth Partner"}
