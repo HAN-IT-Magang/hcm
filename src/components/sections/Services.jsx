@@ -10,6 +10,7 @@ const services = [
   { id: '07', title: 'Shoppable\nContent' },
   { id: '08', title: 'Photo & Video' },
   { id: '09', title: 'Graphic\nDesign' },
+  { id: '10', title: 'Web Design &\nDevelopment' },
 ]
 
 export function Services() {
