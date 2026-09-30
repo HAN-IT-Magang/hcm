@@ -105,14 +105,7 @@ export function TeamSection() {
           {/* KANAN */}
           <div>
             <div className="flex items-center gap-6 md:gap-8">
-              <div data-gsap="left" className="hidden w-44 shrink-0 overflow-hidden rounded-2xl shadow-xl sm:block md:w-48">
-                <img
-                  src={teamPhoto}
-                  alt={isEn ? 'HCM Team' : 'Tim HCM'}
-                  className="h-44 w-full object-cover object-top md:h-48"
-                  loading="lazy"
-                />
-              </div>
+
               <div className="flex flex-col justify-center">
                 <div data-gsap="zoom" className="font-sans text-6xl font-black tracking-tight text-white md:text-7xl">
                   20<span className="text-accent-yellow">+</span>
@@ -172,7 +165,7 @@ export function TeamSection() {
 
         <div className="mx-auto max-w-[1100px] px-6 relative z-10">
           <h2 className="text-center font-sans text-4xl md:text-5xl font-black text-[#00104D] mb-16 md:mb-24 tracking-tight">
-            {isEn ? 'Leadership' : 'Leadership'}
+            {isEn ? 'Meet Our Team' : 'Meet Our Team'}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 items-start justify-items-center">
