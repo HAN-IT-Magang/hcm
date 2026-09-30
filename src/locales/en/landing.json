@@ -1,10 +1,25 @@
 {
   "nav": [
-    { "label": "About HCM", "href": "#about" },
-    { "label": "Services", "href": "#services" },
-    { "label": "Clients", "href": "#logos" },
-    { "label": "FAQ", "href": "#faq" },
-    { "label": "Contact", "href": "#kontak" }
+    {
+      "label": "About HCM",
+      "href": "/about"
+    },
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Clients",
+      "href": "#logos"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    },
+    {
+      "label": "Contact",
+      "href": "#kontak"
+    }
   ],
   "cta": {
     "getStarted": "Scale Your Brand",
@@ -19,9 +34,18 @@
     "primaryCta": "Scale Your Brand",
     "secondaryCta": "View Services",
     "stats": [
-      { "value": "Rp 25M+", "label": "Total GMV Generated" },
-      { "value": "500+", "label": "Active Affiliator Network" },
-      { "value": "4.8x", "label": "Average Ad ROAS" }
+      {
+        "value": "Rp 25M+",
+        "label": "Total GMV Generated"
+      },
+      {
+        "value": "500+",
+        "label": "Active Affiliator Network"
+      },
+      {
+        "value": "4.8x",
+        "label": "Average Ad ROAS"
+      }
     ]
   },
   "about": {
@@ -70,19 +94,31 @@
         "icon": "🏪",
         "title": "Marketplace Management",
         "desc": "Holistic management of your TikTok Shop & Shopee storefronts. Catalog setup, high-converting product copy, flash sales, voucher optimization, and strategic bundling.",
-        "points": ["Store SEO & Algorithm Optimization", "Campaign & Flash Sale Execution", "Inventory & Promo Management"]
+        "points": [
+          "Store SEO & Algorithm Optimization",
+          "Campaign & Flash Sale Execution",
+          "Inventory & Promo Management"
+        ]
       },
       {
         "icon": "🌟",
         "title": "Affiliator Management",
         "desc": "Curation and relationship management with 500+ active creators. Targeted product seeding, persuasive briefs, content tracking, and daily affiliate GMV reporting.",
-        "points": ["500+ Top Affiliator Database", "Targeted Sample Distribution", "High-Converting Content Briefs"]
+        "points": [
+          "500+ Top Affiliator Database",
+          "Targeted Sample Distribution",
+          "High-Converting Content Briefs"
+        ]
       },
       {
         "icon": "📈",
         "title": "Ads Management",
         "desc": "High-performance paid advertising across TikTok Shop Ads and Meta/Shopee Ads. Precise audience targeting, creative A/B testing, and profitable scaling frameworks.",
-        "points": ["Positive ROAS Focused", "Hook & Visual A/B Testing", "Real-Time Transparent Reporting"]
+        "points": [
+          "Positive ROAS Focused",
+          "Hook & Visual A/B Testing",
+          "Real-Time Transparent Reporting"
+        ]
       }
     ]
   },

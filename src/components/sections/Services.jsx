@@ -41,13 +41,10 @@ export function Services() {
               <div
                 key={item.id}
                 data-gsap-item="auto"
-                className={`flex gap-4 md:gap-6 px-4 md:px-8 ${
-                  index === 9 ? 'lg:col-start-2' : ''
-                } ${
-                  index % 3 !== 2 && index !== 9 ? 'lg:border-r-2 lg:border-brand-100' : ''
-                } ${
-                  index % 2 !== 1 ? 'md:border-r-2 md:border-brand-100 lg:border-r-0' : 'md:border-r-0'
-                }`}
+                className={`flex gap-4 md:gap-6 px-4 md:px-8 ${index === 9 ? 'lg:col-start-2' : ''
+                  } ${index % 3 !== 2 && index !== 9 ? 'lg:border-r-2 lg:border-brand-100' : ''
+                  } ${index % 2 !== 1 ? 'md:border-r-2 md:border-brand-100 lg:border-r-0' : 'md:border-r-0'
+                  }`}
               >
                 <div className="font-sans font-bold text-4xl md:text-5xl text-accent-magenta transform -scale-y-100 scale-y-100">
                   {item.id}

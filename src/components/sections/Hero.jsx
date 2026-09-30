@@ -28,12 +28,12 @@ export function Hero() {
 
         {/* Main Logo Image "HAN" */}
         <div className="relative mb-6 flex justify-center items-center">
-          <img 
+          <img
             data-gsap="zoom"
             data-gsap-hero="0"
-            src={hanLogo} 
-            alt="HAN" 
-            className="w-auto h-[140px] md:h-[235px] lg:h-[285px] object-contain drop-shadow-2xl" 
+            src={hanLogo}
+            alt="HAN"
+            className="w-auto h-[140px] md:h-[235px] lg:h-[285px] object-contain drop-shadow-2xl"
           />
         </div>
 

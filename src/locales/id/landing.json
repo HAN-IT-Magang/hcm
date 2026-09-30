@@ -1,10 +1,25 @@
 {
   "nav": [
-    { "label": "Tentang HCM", "href": "#about" },
-    { "label": "Layanan", "href": "#services" },
-    { "label": "Klien", "href": "#logos" },
-    { "label": "FAQ", "href": "#faq" },
-    { "label": "Kontak", "href": "#kontak" }
+    {
+      "label": "Tentang HCM",
+      "href": "/about"
+    },
+    {
+      "label": "Layanan",
+      "href": "#services"
+    },
+    {
+      "label": "Klien",
+      "href": "#logos"
+    },
+    {
+      "label": "FAQ",
+      "href": "#faq"
+    },
+    {
+      "label": "Kontak",
+      "href": "#kontak"
+    }
   ],
   "cta": {
     "getStarted": "Mulai Scale Brand",
@@ -19,9 +34,18 @@
     "primaryCta": "Mulai Scale Brand",
     "secondaryCta": "Lihat Layanan",
     "stats": [
-      { "value": "Rp 25M+", "label": "Total GMV Dihasilkan" },
-      { "value": "500+", "label": "Kreator & Affiliator Aktif" },
-      { "value": "4.8x", "label": "Rata-rata ROAS Iklan" }
+      {
+        "value": "Rp 25M+",
+        "label": "Total GMV Dihasilkan"
+      },
+      {
+        "value": "500+",
+        "label": "Kreator & Affiliator Aktif"
+      },
+      {
+        "value": "4.8x",
+        "label": "Rata-rata ROAS Iklan"
+      }
     ]
   },
   "about": {
@@ -70,19 +94,31 @@
         "icon": "🏪",
         "title": "Marketplace Management",
         "desc": "Optimasi menyeluruh toko TikTok Shop & Shopee kamu. Setup etalase, copywriting produk, dekorasi toko, optimasi flash sale, manajemen voucher, hingga strategi bundling.",
-        "points": ["Optimasi Algoritma & SEO Toko", "Campaign & Flash Sale Setup", "Manajemen Stok & Voucher Promosi"]
+        "points": [
+          "Optimasi Algoritma & SEO Toko",
+          "Campaign & Flash Sale Setup",
+          "Manajemen Stok & Voucher Promosi"
+        ]
       },
       {
         "icon": "🌟",
         "title": "Affiliator Management",
         "desc": "Kurasi dan kolaborasi dengan 500+ kreator & affiliator aktif. Pengiriman sampel terarah, briefing konten persuasif, monitoring postingan, dan tracking GMV affiliasi harian.",
-        "points": ["Kurasi 500+ Top Affiliator", "Distribusi & Monitoring Sampel", "Brief Konten High-Conversion"]
+        "points": [
+          "Kurasi 500+ Top Affiliator",
+          "Distribusi & Monitoring Sampel",
+          "Brief Konten High-Conversion"
+        ]
       },
       {
         "icon": "📈",
         "title": "Ads Management",
         "desc": "Manajemen iklan berbayar TikTok Shop Ads & Meta/Shopee Ads. Riset audiens presisi, A/B testing materi kreatif, struktur campaign efisien, hingga scaling profitabel.",
-        "points": ["Fokus Target ROAS Positif", "A/B Testing Hook & Visual", "Laporan Transparan Real-Time"]
+        "points": [
+          "Fokus Target ROAS Positif",
+          "A/B Testing Hook & Visual",
+          "Laporan Transparan Real-Time"
+        ]
       }
     ]
   },
