@@ -40,8 +40,8 @@ export function Hero() {
         {/* Subtitle Box — Stacked */}
         <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-1 md:gap-2 bg-transparent border-t-2 border-white/30 w-full max-w-4xl pt-6 md:pt-10">
           <div data-gsap="clip-right" data-gsap-hero="5">
-            <h2 className="text-white/90 font-sans font-medium text-xl sm:text-2xl md:text-2xl lg:text-3xl tracking-wide text-center">
-              {isEn ? "Your Growth Partner" : "Your Growth Partner"}
+            <h2 className="text-white font-sans font-bold type-h3 tracking-wide text-center">
+              {isEn ? 'Your Growth Partner' : 'Mitra Pertumbuhan'}
             </h2>
           </div>
         </div>
@@ -52,10 +52,10 @@ export function Hero() {
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-4 px-8 py-4 bg-accent-yellow text-ink-900 font-sans font-bold text-lg shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1"
+            className="inline-flex items-center justify-center gap-4 bg-accent-yellow px-8 py-4 font-sans text-sm font-bold text-ink-900 shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl md:text-base"
           >
             <span>{isEn ? 'Start scaling' : 'Mulai Scale Brand'}</span>
-            <span className="text-2xl leading-none font-black">+</span>
+            <span className="text-xl leading-none font-black">+</span>
           </a>
         </div>
 

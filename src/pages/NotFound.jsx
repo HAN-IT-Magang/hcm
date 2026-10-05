@@ -6,9 +6,9 @@ export function NotFound() {
   const { t } = useTranslation()
   return (
     <Container className="py-24 text-center">
-      <p className="text-6xl font-extrabold text-ink-900">404</p>
-      <p className="mt-3 text-ink-500">{t('notFound.message')}</p>
-      <Button to="/" className="mt-6">{t('notFound.back')}</Button>
+      <p data-gsap="zoom" className="type-display font-sans text-ink-900">404</p>
+      <p data-gsap="fade" data-gsap-delay="0.1" className="type-body mt-3 font-sans text-ink-500">{t('notFound.message')}</p>
+      <Button to="/" data-gsap="pop" data-gsap-delay="0.18" className="mt-6">{t('notFound.back')}</Button>
     </Container>
   )
 }

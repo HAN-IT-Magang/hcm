@@ -106,7 +106,7 @@ export function Ratecard() {
                 <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-8 h-8 sm:w-10 sm:h-10 bg-[#00E0A4] border-[2px] sm:border-[3px] border-[#00104D] rounded-full flex items-center justify-center font-anton text-base sm:text-lg text-[#00104D] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
                   {item.num}
                 </div>
-                <h3 className="font-['Bebas_Neue',_sans-serif] text-2xl sm:text-3xl text-[#0030FF] mt-1 sm:mt-2 transition-colors duration-300 group-hover:text-[#FF2E93]">{item.title}</h3>
+                <h3 className="font-sans font-extrabold uppercase tracking-tight text-2xl sm:text-3xl text-[#0030FF] mt-1 sm:mt-2 transition-colors duration-300 group-hover:text-[#FF2E93]">{item.title}</h3>
               </div>
             ))}
           </div>
@@ -117,7 +117,7 @@ export function Ratecard() {
           <div data-gsap-item="auto" className="bg-[#FFD600] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[12px_12px_0_0_#00104D] p-5 sm:p-10 rotate-0 sm:-rotate-1 min-w-0">
             <div className="mb-6 sm:mb-8 border-b-[2px] sm:border-b-[3px] border-[#00104D] pb-4 sm:pb-6">
               <h3 className="font-anton text-3xl sm:text-4xl text-[#00104D] uppercase mb-2 break-words">Ratecard <span className="text-[#00E0A4]" style={{ WebkitTextStroke: '1.5px #00104D', textShadow: '2px 2px 0px #00104D' }}>MPA</span></h3>
-              <p className="font-['Bebas_Neue',_sans-serif] text-3xl sm:text-4xl text-[#0030FF]">Aset digital</p>
+              <p className="font-sans font-extrabold uppercase tracking-tight text-3xl sm:text-4xl text-[#0030FF]">Aset digital</p>
             </div>
 
             <div className="space-y-4">
@@ -130,7 +130,7 @@ export function Ratecard() {
                   <span className="font-montserrat font-bold text-[#00104D] text-sm sm:text-base pr-4 transition-transform duration-300 group-hover:translate-x-2">{srv.name}</span>
                   <div className="flex flex-col items-end whitespace-nowrap transition-transform duration-300 group-hover:-translate-x-2">
                     <span className="font-montserrat text-[10px] font-bold text-[#00104D] uppercase leading-none mb-1 opacity-70">{isEn ? "Start From" : "Mulai Dari"}</span>
-                    <span className="font-['Bebas_Neue',_sans-serif] text-[#0030FF] text-2xl leading-none">{srv.price}</span>
+                    <span className="font-sans font-extrabold uppercase tracking-tight text-[#0030FF] text-2xl leading-none">{srv.price}</span>
                   </div>
                 </div>
               ))}
@@ -140,7 +140,7 @@ export function Ratecard() {
           <div data-gsap-item="auto" className="bg-[#00E0A4] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[12px_12px_0_0_#00104D] p-5 sm:p-10 rotate-0 sm:rotate-1 min-w-0">
             <div className="mb-6 sm:mb-8 border-b-[2px] sm:border-b-[3px] border-[#00104D] pb-4 sm:pb-6">
               <h3 className="font-anton text-3xl sm:text-4xl text-[#00104D] uppercase mb-2 break-words">Ratecard <span className="text-[#FF2E93]" style={{ WebkitTextStroke: '1.5px #00104D', textShadow: '2px 2px 0px #00104D' }}>Monthly</span></h3>
-              <p className="font-['Bebas_Neue',_sans-serif] text-3xl sm:text-4xl text-[#0030FF]">Management</p>
+              <p className="font-sans font-extrabold uppercase tracking-tight text-3xl sm:text-4xl text-[#0030FF]">Management</p>
             </div>
 
             <div className="space-y-4">
@@ -153,7 +153,7 @@ export function Ratecard() {
                   <span className="font-montserrat font-bold text-[#00104D] text-sm sm:text-base pr-4 transition-transform duration-300 group-hover:translate-x-2">{srv.name}</span>
                   <div className="flex flex-col items-end whitespace-nowrap transition-transform duration-300 group-hover:-translate-x-2">
                     <span className="font-montserrat text-[10px] font-bold text-[#00104D] uppercase leading-none mb-1 opacity-70">{isEn ? "Start From" : "Mulai Dari"}</span>
-                    <span className="font-['Bebas_Neue',_sans-serif] text-[#0030FF] text-2xl leading-none">{srv.price}</span>
+                    <span className="font-sans font-extrabold uppercase tracking-tight text-[#0030FF] text-2xl leading-none">{srv.price}</span>
                   </div>
                 </div>
               ))}
@@ -165,7 +165,7 @@ export function Ratecard() {
         <div data-gsap="zoom" className="bg-[#0030FF] border-[2px] sm:border-[3px] border-[#00104D] shadow-[4px_4px_0_0_#00104D] sm:shadow-[16px_16px_0_0_#00104D] p-5 sm:p-12 min-w-0" >
           <div className="mb-8 sm:mb-12">
             <h2 className="font-anton text-3xl sm:text-5xl md:text-7xl text-[#FFFFFF] uppercase break-words" style={{ textShadow: '4px 4px 0px #00104D' }}>Marketplace <span className="text-[#C6FF00]">MPO</span></h2>
-            <p className="font-['Bebas_Neue',_sans-serif] text-2xl sm:text-4xl md:text-5xl text-[#00E0A4]">Optimization</p>
+            <p className="font-sans font-extrabold uppercase tracking-tight text-2xl sm:text-4xl md:text-5xl text-[#00E0A4]">Optimization</p>
           </div>
 
           <div className="flex flex-col xl:flex-row gap-6 sm:gap-10">

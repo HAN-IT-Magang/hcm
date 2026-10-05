@@ -4,6 +4,7 @@ export const landingSections = [
   { id: 'services',   type: 'services',     enabled: true  }, // 3. Layanan
   { id: 'portofolio', type: 'portfolio',    enabled: true  }, // 4. Portofolio (Bukti)
   { id: 'logos',      type: 'logos',        enabled: true  }, // 5. Klien (Bukti)
+  { id: 'cta',        type: 'cta',          enabled: false },
   { id: 'faq',        type: 'faq',          enabled: true  }, // 6. FAQ
   { id: 'kontak',     type: 'contact',      enabled: false  }, // 7. Kontak (mati — CTA sudah ada di footer)
 ]

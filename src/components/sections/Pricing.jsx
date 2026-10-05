@@ -33,9 +33,9 @@ export function Pricing() {
             <h3 className={cn('font-bold', p.featured ? 'text-white' : 'text-ink-900')}>{p.name}</h3>
             <p className="mt-2">
               <span className="text-3xl font-extrabold">{p.price}</span>
-              <span className={cn('text-sm', p.featured ? 'text-white/60' : 'text-ink-500')}>{p.period}</span>
+              <span className={cn('text-sm', p.featured ? 'text-white/85' : 'text-ink-700')}>{p.period}</span>
             </p>
-            <p className={cn('mt-2 text-sm', p.featured ? 'text-white/70' : 'text-ink-500')}>{p.desc}</p>
+            <p className={cn('mt-2 text-sm', p.featured ? 'text-white/85' : 'text-ink-700')}>{p.desc}</p>
             <ul className="mt-5 flex-1 space-y-2.5 text-sm">
               {p.features.map((f) => (
                 <li key={f} className="flex gap-2">

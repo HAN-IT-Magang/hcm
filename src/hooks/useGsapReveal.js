@@ -82,6 +82,52 @@ function resolveItemType(group, el, index) {
   return base
 }
 
+// Main langsung (bukan saat scroll). Dipakai panel yang muncul karena klik,
+// dengan pola gerak yang sama: kiri, kanan, zoom, pop. Tanpa sumbu Y.
+export function playGsapIn(root) {
+  if (!root || prefersReduced()) return undefined
+  const mobile = isMobile()
+  const ctx = gsap.context(() => {
+    const nested = (el) => {
+      const own = el.closest('[data-gsap-own]')
+      return Boolean(own && own !== root && root.contains(own))
+    }
+
+    gsap.utils.toArray('[data-gsap]', root).forEach((el) => {
+      if (nested(el)) return
+      const type = el.dataset.gsap || 'fade'
+      const from = varsFor(type, mobile)
+      gsap.fromTo(el, from, {
+        ...endVars(from),
+        duration: parseFloat(el.dataset.gsapDuration || '0.85'),
+        delay: parseFloat(el.dataset.gsapDelay || '0'),
+        ease: easeFor(type),
+      })
+    })
+
+    const groups = gsap.utils.toArray('[data-gsap-group]', root)
+    if (root.matches?.('[data-gsap-group]')) groups.unshift(root)
+    groups.forEach((group) => {
+      if (nested(group)) return
+      const kids = Array.from(group.querySelectorAll('[data-gsap-item]')).filter((el) => !nested(el))
+      if (!kids.length) return
+      kids.forEach((kid, i) => gsap.set(kid, varsFor(resolveItemType(group, kid, i), mobile)))
+      gsap.to(kids, {
+        x: 0,
+        scale: 1,
+        rotation: 0,
+        rotationY: 0,
+        opacity: 1,
+        clipPath: 'inset(0% 0% 0% 0%)',
+        duration: 0.85,
+        ease: 'power4.out',
+        stagger: parseFloat(group.dataset.gsapStagger || '0.08'),
+      })
+    })
+  }, root)
+  return () => ctx.revert()
+}
+
 export function useGsapReveal() {
   useLayoutEffect(() => {
     // Hormati prefers-reduced-motion: tampil normal tanpa animasi.
@@ -105,7 +151,7 @@ export function useGsapReveal() {
             trigger: el,
             start: 'top 90%',
             end: 'bottom 10%',
-            toggleActions: 'play reverse play reverse',
+            toggleActions: el.hasAttribute('data-gsap-once') ? 'play none none none' : 'play reverse play reverse',
           },
         })
       })
@@ -133,7 +179,7 @@ export function useGsapReveal() {
             trigger: group,
             start: 'top 88%',
             end: 'bottom 10%',
-            toggleActions: 'play reverse play reverse',
+            toggleActions: group.hasAttribute('data-gsap-once') ? 'play none none none' : 'play reverse play reverse',
           },
         })
       })

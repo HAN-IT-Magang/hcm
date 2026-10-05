@@ -1,24 +1,20 @@
 {
   "nav": [
     {
+      "label": "Beranda",
+      "href": "/"
+    },
+    {
       "label": "Tentang HCM",
       "href": "/about"
     },
     {
       "label": "Layanan",
-      "href": "#services"
+      "href": "/layanan"
     },
     {
-      "label": "Klien",
-      "href": "#logos"
-    },
-    {
-      "label": "FAQ",
-      "href": "#faq"
-    },
-    {
-      "label": "Kontak",
-      "href": "#kontak"
+      "label": "Portofolio",
+      "href": "/portofolio"
     }
   ],
   "cta": {
@@ -149,32 +145,28 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Pertanyaan yang Sering Diajukan",
+    "title": "Punya pertanyaan? Kami siap bantu",
     "subtitle": "Punya pertanyaan seputar layanan HCM? Temukan jawabannya di sini.",
     "items": [
       {
         "q": "Layanan apa saja yang tersedia di HCM?",
-        "a": "HCM menyediakan solusi e-commerce secara end-to-end: Marketplace Activation (MPA), Marketplace Optimization (MPO), Affiliate & KOL Management, Ads Management, Social Media Management, Digital Creative Asset, Live Streaming Product."
+        "a": "Marketplace, affiliate & KOL, iklan, sosial media, aset kreatif, sampai live streaming produk."
       },
       {
         "q": "Apakah HCM hanya cocok untuk brand besar?",
-        "a": "Tidak. HCM bisa support berbagai tahap bisnis, mulai dari brand yang baru memulai e-commerce, brand yang ingin meningkatkan penjualan, hingga brand yang ingin melakukan scale-up."
+        "a": "Tidak. HCM mendampingi brand yang baru mulai, yang ingin naik penjualan, sampai yang siap scale-up."
       },
       {
-        "q": "Apa yang membedakan HCM dengan agency marketing lain?",
-        "a": "HCM tidak hanya berperan sebagai penyedia jasa, tetapi sebagai partner pertumbuhan. Kami memahami bahwa setiap brand memiliki tantangan berbeda, sehingga strategi yang dibuat menyesuaikan kondisi bisnis, target market, dan tujuan brand."
+        "q": "Apa yang membedakan HCM dengan agency lain?",
+        "a": "HCM jadi partner pertumbuhan. Strateginya menyesuaikan kondisi bisnis, target pasar, dan tujuan brand."
       },
       {
-        "q": "Apakah HCM menggunakan sistem kerja berbasis hasil?",
-        "a": "Ya. Selain skema Management Fee, HCM juga punya pendekatan partnership dengan brand melalui strategi yang berorientasi pada pertumbuhan bisnis (Sharing Commision). S&K berlaku."
-      },
-      {
-        "q": "Berapa lama waktu yang dibutuhkan untuk melihat hasil?",
-        "a": "Setiap brand memiliki kondisi berbeda tergantung kategori produk, kesiapan toko, budget marketing, dan strategi yang dijalankan. Namun, HCM selalu memulai dengan analisa kondisi brand untuk menentukan strategi dan target yang realistis."
+        "q": "Berapa lama hasilnya mulai kelihatan?",
+        "a": "Tergantung produk, kesiapan toko, dan budget. HCM mulai dari analisa brand supaya targetnya realistis."
       },
       {
         "q": "Bagaimana cara mulai bekerja sama dengan HCM?",
-        "a": "Cukup konsultasikan kebutuhan brand Anda melalui WhatsApp. Tim HCM akan membantu memahami kondisi bisnis Anda dan memberikan rekomendasi strategi yang sesuai."
+        "a": "Konsultasikan kebutuhan brand lewat WhatsApp. Tim HCM akan bantu susun strategi yang sesuai."
       }
     ]
   },
@@ -190,7 +182,7 @@
     "navTitle": "Navigasi",
     "servicesTitle": "Layanan",
     "contactTitle": "Hubungi Kami",
-    "rights": "All rights reserved. Your Growth Partner."
+    "rights": "Hak cipta dilindungi. Mitra pertumbuhan Anda."
   },
   "meta": {
     "title": "HAN Creative Marketing (HCM) — Partner Pertumbuhan E-Commerce TikTok Shop & Shopee",
@@ -246,9 +238,23 @@
   },
   "ctaSection": {
     "waText": "Halo HCM, saya mau konsultasi scale brand e-commerce saya.",
-    "title": "Siap Scale Brand E-Commerce Kamu?",
+    "title": "Serahkan pekerjaan ke\ntim ahli kami",
     "subtitle": "Chat tim growth specialist HCM sekarang, konsultasi pertama gratis.",
     "primaryCta": "Chat via WhatsApp",
-    "secondaryCta": "Lihat Harga"
+    "secondaryCta": "Lihat Harga",
+    "items": [
+      {
+        "label": "Pertumbuhan lebih cepat",
+        "headline": "Kami bantu kamu rekrut & market"
+      },
+      {
+        "label": "Efisiensi operasional",
+        "headline": "Kami jalankan back office kamu"
+      },
+      {
+        "label": "Visibilitas yang jelas",
+        "headline": "Kami susun rencana sampai target retensi"
+      }
+    ]
   }
 }

@@ -1,7 +1,9 @@
 import { HeroAbout } from '@/components/about/HeroAbout'
 import { TeamSection } from '@/components/about/TeamSection'
 import { ServiceList } from '@/components/about/ServiceList'
+import { HowWeWork } from '@/components/about/HowWeWork'
 import { Logos } from '@/components/sections/Logos'
+import { Faq } from '@/components/sections/Faq'
 
 export function About() {
   return (
@@ -9,7 +11,9 @@ export function About() {
       <HeroAbout />
       <TeamSection />
       <ServiceList />
+      <HowWeWork />
       <Logos />
+      <Faq />
     </main>
   )
 }

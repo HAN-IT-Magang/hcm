@@ -25,6 +25,15 @@
   --color-ink-700: #1a1a3a;
   --color-ink-500: #5b5b72;
 
+  /* Konsisten type scale landing (6 step, Plus Jakarta Sans) */
+  --text-display: clamp(1.875rem, 4vw + 1rem, 3.5rem); /* 30 -> 56 */
+  --text-h2: clamp(1.5rem, 2.5vw + 0.75rem, 2.25rem); /* 24 -> 36 */
+  --text-h3: 1.375rem; /* 22 */
+  --text-h3-md: 1.5rem; /* 24 */
+  --text-body: 1rem; /* 16 */
+  --text-small: 0.875rem; /* 14 */
+  --text-caption: 0.75rem; /* 12 */
+
   --animate-float: float 6s ease-in-out infinite;
   --animate-marquee: marquee 28s linear infinite;
 }
@@ -52,7 +61,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 html,
@@ -74,6 +83,80 @@ section[id] {
 
 body {
   @apply bg-white text-ink-700 font-sans antialiased;
+}
+
+/* Pindah halaman: geser kiri-kanan. Bukan reveal section. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes page-enter {
+    from { transform: translate3d(100%, 0, 0); }
+    to { transform: translate3d(0, 0, 0); }
+  }
+
+  @keyframes page-leave {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-100%, 0, 0); }
+  }
+
+  #root {
+    min-height: 100%;
+    animation: page-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+
+  html.page-leave #root {
+    animation: page-leave 0.4s cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+}
+
+/* === HCM type system (konsisten, 6 step) ===
+   Display: hero, H2: section, H3: card, Body/Small/Caption.
+   Warna teks hanya: ink-900 / ink-700 / ink-500 solid / white / white-85.
+   Magenta (#ff007f, 3.78:1) khusus heading besar, yellow (#ffd600, 1.41:1)
+   hanya sebagai background. */
+.type-display {
+  font-size: var(--text-display);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.type-h2 {
+  font-size: var(--text-h2);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.type-h3 {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .type-h3 { font-size: var(--text-h3-md); }
+}
+.type-body { font-size: var(--text-body); font-weight: 400; line-height: 1.6; }
+.type-small { font-size: var(--text-small); font-weight: 400; line-height: 1.5; }
+.type-caption {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* === Peran warna ala Asphalt (satu warna, satu tugas) ===
+   Fill   = background/permukaan (putih / brand)
+   Border = garis pembatas (ink-900/10)
+   Icon   = SELALU solid ink-900, tidak pernah ikut warna aksen.
+   Aturan ikon: satu set (Lucide), satu ketebalan garis (stroke 1),
+   tanpa gradient/shadow. Logo klien dikecualikan (pakai aset resmi). */
+.icon {
+  color: var(--color-ink-900);
+}
+
+/* === Shadow: maksimal 2 gaya (Low / High), sumber cahaya tegak lurus === */
+@theme {
+  --shadow-low: 0 1px 2px rgb(5 5 26 / 0.08);
+  --shadow-high: 0 12px 32px -8px rgb(5 5 26 / 0.22);
 }
 
 /* Reveal & motion ditangani penuh oleh GSAP (useGsapReveal).

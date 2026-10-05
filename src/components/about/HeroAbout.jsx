@@ -1,4 +1,8 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { localizePath } from '@/lib/locale'
+import { useLang } from '@/components/ui/LanguageMenu'
+import { Zap } from 'lucide-react'
 import { Container } from '../ui/Container'
 import { siteConfig } from '@/config/site'
 import starIcon from '@/assets/Icon.webp'
@@ -6,6 +10,7 @@ import starIcon from '@/assets/Icon.webp'
 export function HeroAbout() {
   const { i18n } = useTranslation()
   const isEn = i18n.language === 'en'
+  const lang = useLang()
 
   const waMessage = isEn
     ? 'Hello HCM, I want to scale my brand with you.'
@@ -21,10 +26,10 @@ export function HeroAbout() {
 
       <Container className="relative z-10 px-6 py-14 md:py-20">
         {/* breadcrumb kecil — penanda halaman */}
-        <nav data-gsap="zoom" aria-label="Breadcrumb" className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/40 px-4 py-1.5 font-sans text-xs font-medium text-white/70 md:text-sm">
-          <a href="/" className="transition-colors hover:text-white">
+        <nav data-gsap="zoom" aria-label="Breadcrumb" className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/40 px-4 py-1.5 font-sans text-xs font-medium text-white/85 md:text-sm">
+          <Link to={localizePath('/', lang)} reloadDocument className="transition-colors hover:text-white">
             {isEn ? 'Home' : 'Beranda'}
-          </a>
+          </Link>
           <span aria-hidden="true" className="font-bold text-white">»</span>
           <span className="text-white">{isEn ? 'About Us' : 'Tentang Kami'}</span>
         </nav>
@@ -34,13 +39,13 @@ export function HeroAbout() {
           {/* Baris 1: YOUR + kotak kuning */}
           <span className="flex flex-wrap items-center gap-4 md:gap-6">
             <span data-gsap="clip-left" className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
-              YOUR
+              {isEn ? 'YOUR' : 'MILIKMU'}
             </span>
             <span data-gsap="pop" data-gsap-delay="0.1" className="relative inline-block">
               {/* icon starburst asli */}
               <img src={starIcon} alt="" aria-hidden="true" className="absolute -right-10 -top-10 h-20 w-20 animate-float md:-right-14 md:-top-14 md:h-28 md:w-28" />
-              <span className="relative block bg-accent-yellow px-5 py-2 font-serif text-3xl font-bold italic text-ink-900 sm:text-4xl md:px-8 md:text-5xl">
-                All In One
+              <span className="relative block bg-accent-yellow px-5 py-2 font-sans text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl md:px-8 md:text-5xl">
+                {isEn ? 'All In One' : 'Satu Atap'}
               </span>
             </span>
           </span>
@@ -48,22 +53,22 @@ export function HeroAbout() {
           {/* Baris 2: CREATIVE + pill pengganti foto (TANPA FOTO) */}
           <span className="mt-3 flex flex-wrap items-center gap-4 md:mt-4 md:gap-6">
             <span data-gsap="clip-left" data-gsap-delay="0.08" className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
-              CREATIVE
+              {isEn ? 'CREATIVE' : 'KREATIF'}
             </span>
             {/* pill statik — bukan foto: marquee mini creator */}
             <span data-gsap="zoom" data-gsap-delay="0.15" className="inline-flex h-12 items-center gap-2 overflow-hidden rounded-full bg-[#CEFE4A] px-5 font-sans text-xs font-black uppercase tracking-widest text-ink-900 sm:h-14 sm:text-sm md:px-6">
               <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-accent-magenta" />
               {isEn ? '500+ Creators' : '500+ Kreator'}
-              <span className="font-black">⚡</span>
+              <Zap className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
             </span>
           </span>
 
           {/* Baris 3: Agency + deskripsi + CTA */}
           <span className="mt-4 grid items-end gap-6 md:mt-6 lg:grid-cols-[auto_1fr_auto] lg:gap-10">
-            <span data-gsap="clip-left" data-gsap-delay="0.14" className="inline-block overflow-visible pb-4 pt-1 font-serif text-4xl font-medium italic leading-[1.15] text-white sm:text-5xl md:text-6xl">
-              Agency
+            <span data-gsap="clip-left" data-gsap-delay="0.14" className="inline-block overflow-visible pb-4 pt-1 font-sans text-4xl font-extrabold tracking-tight leading-[1.15] text-white sm:text-5xl md:text-6xl">
+              {isEn ? 'Agency' : 'Agensi'}
             </span>
-            <span data-gsap="zoom" data-gsap-delay="0.2" className="max-w-md font-sans text-sm font-normal leading-relaxed text-white/85 md:text-base">
+            <span data-gsap="zoom" data-gsap-delay="0.2" className="type-body max-w-md font-sans text-white/85">
               {isEn
                 ? 'HCM partners with brands to build sustainable growth and meaningful connections.'
                 : 'HCM bermitra dengan brand untuk membangun pertumbuhan berkelanjutan dan koneksi yang bermakna.'}

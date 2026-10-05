@@ -48,7 +48,7 @@ export function Division() {
 
         {/* Title Badge exactly as PDF (Clean Pink Box) — wipe dari kiri */}
         <div className="flex justify-center mb-16 md:mb-24">
-          <div data-gsap="clip-left" className="inline-block bg-[#E80F88] text-white font-sans font-semibold text-4xl md:text-6xl py-4 px-12">
+          <div data-gsap="clip-left" className="inline-block bg-[#E80F88] text-white font-sans font-bold type-h2 py-4 px-12">
             Our Division
           </div>
         </div>

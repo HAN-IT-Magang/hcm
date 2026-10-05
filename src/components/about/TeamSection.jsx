@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Zap } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 import teamPhoto from '@/assets/fotoorang/Contents (5).png'
 import comproPdf from '@/assets/fotoorang/COMPRO_HCM_2026.pdf'
@@ -11,20 +12,20 @@ import member6 from '@/assets/aboutfotot/Contents (11).png'
 
 // TODO: ganti name & role dengan data asli tim
 const members = [
-  { src: member1, name: 'Data 1', role: 'Marketing Coordinator', bg: 'bg-cyan-100', span: 'row-span-2' },
-  { src: member2, name: 'Data 2', role: 'Account Executive', bg: 'bg-lime-100', span: 'row-span-2' },
-  { src: member3, name: 'Data 3', role: 'Content Creator', bg: 'bg-brand-100', span: '' },
-  { src: member4, name: 'Data 4', role: 'Product Designer', bg: 'bg-amber-100', span: '' },
-  { src: member5, name: 'Data 5', role: 'Ads Specialist', bg: 'bg-cyan-100', span: 'col-span-2' },
-  { src: member6, name: 'Data 6', role: 'Creative Specialist', bg: 'bg-lime-100', span: 'col-span-2' },
+  { src: member1, name: 'Data 1', role: { id: 'Koordinator Marketing', en: 'Marketing Coordinator' } },
+  { src: member2, name: 'Data 2', role: { id: 'Eksekutif Akun', en: 'Account Executive' } },
+  { src: member3, name: 'Data 3', role: { id: 'Kreator Konten', en: 'Content Creator' } },
+  { src: member4, name: 'Data 4', role: { id: 'Desainer Produk', en: 'Product Designer' } },
+  { src: member5, name: 'Data 5', role: { id: 'Spesialis Iklan', en: 'Ads Specialist' } },
+  { src: member6, name: 'Data 6', role: { id: 'Spesialis Kreatif', en: 'Creative Specialist' } },
 ]
 
 const servicePills = [
-  { id: 'Marketplace Management', en: 'Marketplace Management' },
+  { id: 'Manajemen Marketplace', en: 'Marketplace Management' },
   { id: 'Live Streaming', en: 'Live Streaming' },
   { id: 'Affiliator & KOL', en: 'Affiliator & KOL' },
-  { id: 'Ads Management', en: 'Ads Management' },
-  { id: 'Social Media', en: 'Social Media' },
+  { id: 'Manajemen Iklan', en: 'Ads Management' },
+  { id: 'Media Sosial', en: 'Social Media' },
   { id: 'Konten Kreatif', en: 'Creative Content' },
 ]
 
@@ -67,10 +68,10 @@ export function TeamSection() {
           <div className="flex flex-col items-start pt-4">
             <div data-gsap="pop" className="inline-flex items-center rounded-full bg-white/15 px-4 py-1.5 backdrop-blur-sm border border-white/20">
               <span className="font-sans text-sm font-semibold tracking-wide text-white">
-                Growth Partner 🇮🇩
+                {isEn ? 'Growth Partner 🇮🇩' : 'Mitra Pertumbuhan 🇮🇩'}
               </span>
             </div>
-            <p data-gsap="zoom" data-gsap-delay="0.1" className="mt-6 max-w-lg font-sans text-base leading-relaxed text-white/90 md:text-lg">
+            <p data-gsap="zoom" data-gsap-delay="0.1" className="type-body mt-6 max-w-lg font-sans text-white/90">
               {isEn ? (
                 <>HCM combines <span className="font-semibold text-accent-yellow">strategy, data, and execution</span> to drive sustainable e-commerce brand growth. As a growth partner in Indonesia, we grow when your brand grows.</>
               ) : (
@@ -88,15 +89,15 @@ export function TeamSection() {
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                 </svg>
-                Company Profile
+                {isEn ? 'Company Profile' : 'Profil Perusahaan'}
               </a>
             </div>
 
             <div className="mt-12 flex flex-wrap items-center gap-4 md:gap-6">
-              <div data-gsap="zoom" className="font-sans text-5xl font-black tracking-tight text-white md:text-6xl">
+              <div data-gsap="zoom" className="type-display font-sans text-white">
                 Rp25M<span className="text-accent-yellow">+</span>
               </div>
-              <div data-gsap="zoom" data-gsap-delay="0.1" className="font-sans text-sm font-semibold uppercase leading-snug tracking-wider text-white/80 md:text-base">
+              <div data-gsap="zoom" data-gsap-delay="0.1" className="type-caption font-sans text-white/80">
                 {isEn ? <>GMV Generated<br />for Brands</> : <>GMV Dihasilkan<br />untuk Brand</>}
               </div>
             </div>
@@ -107,11 +108,11 @@ export function TeamSection() {
             <div className="flex items-center gap-6 md:gap-8">
 
               <div className="flex flex-col justify-center">
-                <div data-gsap="zoom" className="font-sans text-6xl font-black tracking-tight text-white md:text-7xl">
+                <div data-gsap="zoom" className="type-display font-sans text-white">
                   20<span className="text-accent-yellow">+</span>
                 </div>
-                <div data-gsap="zoom" data-gsap-delay="0.1" className="mt-2 inline-flex items-center rounded-full bg-accent-magenta px-4 py-1.5 font-sans text-sm font-bold tracking-wide text-white w-fit shadow-md">
-                  Tim Profesional ⚡
+                <div data-gsap="zoom" data-gsap-delay="0.1" className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-accent-magenta px-4 py-1.5 font-sans text-sm font-bold tracking-wide text-white w-fit shadow-md">
+                  {isEn ? 'Professional Team' : 'Tim Profesional'} <Zap className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -164,8 +165,8 @@ export function TeamSection() {
         </svg>
 
         <div className="mx-auto max-w-[1100px] px-6 relative z-10">
-          <h2 className="text-center font-sans text-4xl md:text-5xl font-black text-[#00104D] mb-16 md:mb-24 tracking-tight">
-            {isEn ? 'Meet Our Team' : 'Meet Our Team'}
+          <h2 className="type-h2 mb-16 text-center font-sans text-[#00104D] md:mb-24">
+            {isEn ? 'Meet Our Team' : 'Tim Kami'}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 items-start justify-items-center">
@@ -233,11 +234,11 @@ export function TeamSection() {
                   </div>
                   
                   <div className="mt-8 flex flex-col items-center text-center">
-                    <h3 className="font-sans text-xl font-bold text-[#00104D] mb-1">
+                    <h3 className="type-h3 mb-1 font-sans text-[#00104D]">
                       {m.name}
                     </h3>
-                    <p className="font-sans text-sm text-[#00104D]/70 max-w-[200px] leading-relaxed">
-                      {m.role}
+                    <p className="type-small max-w-[200px] font-sans text-[#00104D]/70">
+                      {isEn ? m.role.en : m.role.id}
                     </p>
                   </div>
                 </div>

@@ -1,10 +1,14 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { localizePath } from '@/lib/locale'
+import { useLang } from '@/components/ui/LanguageMenu'
 import { Container } from '../ui/Container'
 import aboutImg from '../../assets/fotoorang/Contents (5).png'
 
 export function About() {
   const { i18n } = useTranslation()
   const isEn = i18n.language === 'en'
+  const lang = useLang()
 
   return (
     <section id="about" className="relative bg-white overflow-hidden flex flex-col font-sans pt-2 sm:pt-6 md:pt-20">
@@ -50,50 +54,61 @@ export function About() {
 
           {/* 'About' Badge — masuk dari kiri */}
           <div data-gsap="left" className="absolute -top-[8%] sm:-top-[5%] md:-top-[12%] left-1 sm:left-0 md:left-[2%] bg-gradient-to-r from-white to-[#CEFE4A] border-[2px] sm:border-[3px] border-black shadow-[4px_4px_0_0_#000] sm:shadow-[8px_8px_0_0_#000] z-30 px-5 py-2 sm:px-8 sm:py-3 md:px-14 md:py-6 transform -rotate-3 hover:scale-105 transition-transform">
-            <h1 className="text-[#00104D] font-sans font-black text-4xl sm:text-6xl md:text-9xl leading-none tracking-tight">
-              About
+            <h1 className="text-[#00104D] font-sans font-black text-[1.75rem] sm:text-[2.25rem] md:text-[3.5rem] leading-none tracking-tight">
+              {isEn ? 'About' : 'Tentang'}
             </h1>
           </div>
 
           {/* 'Han Creative Marketing' Badge — masuk dari kanan */}
           <div data-gsap="right" className="absolute bottom-[12%] sm:bottom-[10%] -right-1 sm:right-[-5%] md:right-[5%] bg-gradient-to-l from-white to-[#CEFE4A] border-[2px] sm:border-[3px] border-black shadow-[4px_4px_0_0_#000] sm:shadow-[8px_8px_0_0_#000] z-30 px-3 py-2 sm:px-6 sm:py-4 md:px-12 md:py-6 transform rotate-2 hover:scale-105 transition-transform max-w-[85%] sm:max-w-none">
-            <h2 className="text-[#00104D] font-sans font-black text-sm sm:text-2xl md:text-5xl whitespace-nowrap tracking-tight">
+            <h2 className="text-[#00104D] font-sans font-bold text-base sm:text-xl md:text-[1.75rem] whitespace-nowrap tracking-tight">
               Han Creative Marketing
             </h2>
           </div>
         </Container>
       </div>
 
-      {/* BOTTOM BLUE SECTION (Matches PDF exactly, no soft gradients) */}
-      <div className="relative bg-[#0030FF] w-full z-40 px-6 py-16 md:px-16 md:py-24 border-t-[4px] border-black">
+      {/* BOTTOM BLUE SECTION — solid fill, tanpa gradient/shadow (guideline GoTo) */}
+      <div className="relative bg-[#0030FF] w-full z-40 pt-16 md:pt-24 pb-24 md:pb-36 border-t-[4px] border-black">
 
-        {/* Decorative star from PDF */}
-        <div className="absolute top-12 right-12 text-[#FFD600] z-50 pointer-events-none">
-          <svg width="60" height="60" viewBox="0 0 100 100" fill="currentColor">
+        {/* Aksen star — dekorasi tunggal, sejajar ritme padding */}
+        <div className="absolute top-10 right-6 md:right-16 text-[#FFD600] z-50 pointer-events-none" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 100 100" fill="currentColor">
             <path d="M50 0 L55 45 L100 50 L55 55 L50 100 L45 55 L0 50 L45 45 Z" />
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 items-start relative z-10">
-
-
-
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-24">
-            {/* Left Yellow Text — dari kiri jauh */}
-            <p data-gsap="left-far" className="text-[#FFD600] font-sans font-bold text-3xl md:text-[40px] leading-[1.3] tracking-tight">
+        <Container className="relative z-10">
+          <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-start">
+            {/* Statement kuning — Title scale, solid */}
+            <p data-gsap="left-far" className="type-h2 font-sans text-[#FFD600]">
               {isEn
                 ? "HCM is a growth partner for e-commerce brands looking to expand through integrated strategies."
                 : "HCM adalah partner pertumbuhan bagi brand e-commerce yang ingin berkembang melalui strategi yang terintegrasi."}
             </p>
 
-            {/* Right White Text — dari kanan jauh */}
-            <p data-gsap="right-far" data-gsap-delay="0.12" className="text-white font-sans font-medium text-xl md:text-[24px] leading-[1.6] tracking-wide pt-2">
+            {/* Penjelas putih — Body scale, solid */}
+            <p data-gsap="right-far" data-gsap-delay="0.12" className="type-body font-sans text-white">
               {isEn
                 ? "From early stages to achieving millions or billions of GMV per month, we believe that the combination of strategy, data, and execution is the key to winning the e-commerce competition."
                 : "Dari tahap awal hingga mencapai pertumbuhan jutaan hingga miliaran GMV per bulan, kami percaya bahwa kombinasi antara strategi, data, dan execution adalah kunci untuk memenangkan persaingan e-commerce."}
             </p>
           </div>
-        </div>
+
+          {/* Tombol ke halaman About detail */}
+          <div className="mt-10 md:mt-12">
+            <Link
+              reloadDocument
+              to={localizePath('/about', lang)}
+              className="inline-flex items-center gap-3 bg-accent-yellow text-ink-900 font-sans font-bold text-sm md:text-base px-8 py-4 transition-all hover:-translate-y-1"
+            >
+              {isEn ? 'More About HCM' : 'Selengkapnya Tentang HCM'}
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </Container>
       </div>
     </section>
   )

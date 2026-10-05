@@ -3,8 +3,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 import en from '../locales/en/landing.json'
 import id from '../locales/id/landing.json'
-
-const STORAGE_KEY = 'han-lang'
+import { STORAGE_KEY } from '../lib/locale'
 
 function applyHtmlLang(lng) {
   const base = (lng || 'id').split('-')[0]
@@ -23,8 +22,8 @@ i18n
     supportedLngs: ['id', 'en'],
     defaultNS: 'landing',
     detection: {
-      order: ['querystring', 'localStorage', 'navigator'],
-      lookupQuerystring: 'lang',
+      order: ['path', 'localStorage'],
+      lookupFromPathIndex: 0,
       lookupLocalStorage: STORAGE_KEY,
       caches: ['localStorage'],
     },

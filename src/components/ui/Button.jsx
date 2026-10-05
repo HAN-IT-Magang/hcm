@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { cn } from '@/lib/cn'
+import { localizePath } from '@/lib/locale'
+import { useLang } from '@/components/ui/LanguageMenu'
 
 const variants = {
   primary: 'bg-ink-900 text-white hover:bg-brand-600 shadow-lg shadow-ink-900/10',
@@ -9,12 +11,14 @@ const variants = {
 }
 
 export function Button({ to, href, variant = 'primary', className, children, ...props }) {
+  const lang = useLang()
   const cls = cn(
     'inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all active:scale-[.98]',
     variants[variant],
     className,
   )
-  if (to) return <Link to={to} className={cls} {...props}>{children}</Link>
+  const dest = typeof to === 'string' && to.startsWith('/') ? localizePath(to, lang) : to
+  if (dest) return <Link to={dest} className={cls} {...props} reloadDocument>{children}</Link>
   if (href) return <a href={href} className={cls} {...props}>{children}</a>
   return <button className={cls} {...props}>{children}</button>
 }

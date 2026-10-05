@@ -27,7 +27,7 @@ export function WhyUs() {
             </div>
 
             <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-between gap-4 sm:gap-6 pt-6 sm:pt-8 border-t-[2px] sm:border-t-[3px] border-white/20 mt-2 sm:mt-4">
-              <a href="#about" className="inline-flex items-center gap-2 font-['Bebas_Neue',_sans-serif] text-2xl text-[#FFFFFF] hover:text-[#FF2E93] transition-colors group">
+              <a href="#about" className="inline-flex items-center gap-2 font-sans font-extrabold uppercase tracking-tight text-2xl text-[#FFFFFF] hover:text-[#FF2E93] transition-colors group">
                 {isEn ? "Visit Our Team" : "Kunjungi Tim Kami"}
                 <svg className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
               </a>
