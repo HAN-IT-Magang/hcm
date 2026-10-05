@@ -127,7 +127,7 @@ export function TeamSection() {
                   <span className="font-sans text-lg font-bold text-brand-600">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="font-sans text-sm font-semibold leading-tight text-[#00104D]">
+                  <span className="min-w-0 font-sans text-sm font-semibold leading-tight text-[#00104D]">
                     {isEn ? s.en : s.id}
                   </span>
                   <span className="ml-auto font-sans text-lg font-bold text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-brand-600">

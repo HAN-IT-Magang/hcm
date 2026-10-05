@@ -13,7 +13,7 @@ export function Hero() {
   const waUrl = `${siteConfig.contact.whatsappUrl}?text=${encodeURIComponent(waMessage)}`
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center bg-gradient-to-br from-brand-600 via-brand-500 to-accent-cyan overflow-hidden pt-32">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center bg-gradient-to-br from-brand-600 via-brand-500 to-accent-cyan overflow-hidden pt-24 md:pt-32">
 
       {/* Abstract Background Shapes — 2 garis bleed melewati layar */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -33,12 +33,12 @@ export function Hero() {
             data-gsap-hero="0"
             src={hanLogo}
             alt="HAN"
-            className="w-auto h-[140px] md:h-[235px] lg:h-[285px] object-contain drop-shadow-2xl"
+            className="h-[104px] w-auto max-w-[min(100%,18rem)] object-contain drop-shadow-2xl sm:h-[140px] sm:max-w-none md:h-[235px] lg:h-[285px]"
           />
         </div>
 
         {/* Subtitle Box — Stacked */}
-        <div className="mt-12 md:mt-16 flex flex-col items-center justify-center gap-1 md:gap-2 bg-transparent border-t-2 border-white/30 w-full max-w-4xl pt-6 md:pt-10">
+        <div className="mt-8 flex w-full max-w-4xl flex-col items-center justify-center gap-1 border-t-2 border-white/30 bg-transparent pt-5 md:mt-16 md:gap-2 md:pt-10">
           <div data-gsap="clip-right" data-gsap-hero="5">
             <h2 className="text-white font-sans font-bold type-h3 tracking-wide text-center">
               {isEn ? 'Your Growth Partner' : 'Mitra Pertumbuhan'}
@@ -47,7 +47,7 @@ export function Hero() {
         </div>
 
         {/* CTA Button — zoom tengah */}
-        <div data-gsap="zoom" data-gsap-hero="6" className="mt-10 mb-8 md:mb-12">
+        <div data-gsap="zoom" data-gsap-hero="6" className="mt-8 mb-8 md:mt-10 md:mb-12">
           <a
             href={waUrl}
             target="_blank"

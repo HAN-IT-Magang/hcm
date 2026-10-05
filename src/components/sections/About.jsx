@@ -48,7 +48,7 @@ export function About() {
             data-gsap="zoom"
             src={aboutImg}
             alt="HCM Team"
-            className="relative z-10 w-[110%] sm:w-[120%] md:w-[110%] max-w-[1200px] h-auto object-contain object-bottom drop-shadow-[0_0_15px_rgba(255,255,255,1)]"
+            className="relative z-10 h-auto w-full max-w-[520px] object-contain object-bottom drop-shadow-[0_0_15px_rgba(255,255,255,1)] sm:w-[110%] sm:max-w-[1200px]"
             style={{ filter: 'drop-shadow(0px 0px 20px white)' }}
           />
 
@@ -60,8 +60,8 @@ export function About() {
           </div>
 
           {/* 'Han Creative Marketing' Badge — masuk dari kanan */}
-          <div data-gsap="right" className="absolute bottom-[12%] sm:bottom-[10%] -right-1 sm:right-[-5%] md:right-[5%] bg-gradient-to-l from-white to-[#CEFE4A] border-[2px] sm:border-[3px] border-black shadow-[4px_4px_0_0_#000] sm:shadow-[8px_8px_0_0_#000] z-30 px-3 py-2 sm:px-6 sm:py-4 md:px-12 md:py-6 transform rotate-2 hover:scale-105 transition-transform max-w-[85%] sm:max-w-none">
-            <h2 className="text-[#00104D] font-sans font-bold text-base sm:text-xl md:text-[1.75rem] whitespace-nowrap tracking-tight">
+          <div data-gsap="right" className="absolute bottom-[12%] right-2 z-30 max-w-[calc(100%-1.5rem)] border-[2px] border-black bg-gradient-to-l from-white to-[#CEFE4A] px-3 py-2 shadow-[4px_4px_0_0_#000] transition-transform hover:scale-105 sm:bottom-[10%] sm:right-[-5%] sm:max-w-none sm:rotate-2 sm:border-[3px] sm:px-6 sm:py-4 sm:shadow-[8px_8px_0_0_#000] md:right-[5%] md:px-12 md:py-6">
+            <h2 className="text-sm font-sans font-bold leading-tight tracking-tight text-[#00104D] sm:whitespace-nowrap sm:text-xl md:text-[1.75rem]">
               Han Creative Marketing
             </h2>
           </div>
@@ -79,34 +79,32 @@ export function About() {
         </div>
 
         <Container className="relative z-10">
-          <div className="grid gap-10 md:grid-cols-2 md:gap-16 items-start">
-            {/* Statement kuning — Title scale, solid */}
-            <p data-gsap="left-far" className="type-h2 font-sans text-[#FFD600]">
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,40rem)_minmax(0,1fr)] lg:gap-x-14 lg:pr-16">
+            <p data-gsap="left-far" className="max-w-[22rem] text-balance font-sans text-[clamp(1.35rem,2vw,1.7rem)] font-extrabold leading-snug text-[#FFD600] sm:max-w-xl lg:max-w-none">
               {isEn
-                ? "HCM is a growth partner for e-commerce brands looking to expand through integrated strategies."
-                : "HCM adalah partner pertumbuhan bagi brand e-commerce yang ingin berkembang melalui strategi yang terintegrasi."}
+                ? 'HCM is a growth partner for e\u2011commerce brands looking to expand through integrated strategies.'
+                : 'HCM adalah partner pertumbuhan bagi brand e\u2011commerce yang ingin berkembang melalui strategi yang terintegrasi.'}
             </p>
 
             {/* Penjelas putih — Body scale, solid */}
-            <p data-gsap="right-far" data-gsap-delay="0.12" className="type-body font-sans text-white">
+            <p data-gsap="right-far" data-gsap-delay="0.12" className="type-body max-w-xl text-pretty font-sans text-white lg:max-w-none lg:pt-1">
               {isEn
                 ? "From early stages to achieving millions or billions of GMV per month, we believe that the combination of strategy, data, and execution is the key to winning the e-commerce competition."
                 : "Dari tahap awal hingga mencapai pertumbuhan jutaan hingga miliaran GMV per bulan, kami percaya bahwa kombinasi antara strategi, data, dan execution adalah kunci untuk memenangkan persaingan e-commerce."}
             </p>
-          </div>
 
-          {/* Tombol ke halaman About detail */}
-          <div className="mt-10 md:mt-12">
-            <Link
-              reloadDocument
-              to={localizePath('/about', lang)}
-              className="inline-flex items-center gap-3 bg-accent-yellow text-ink-900 font-sans font-bold text-sm md:text-base px-8 py-4 transition-all hover:-translate-y-1"
-            >
-              {isEn ? 'More About HCM' : 'Selengkapnya Tentang HCM'}
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <div>
+              <Link
+                reloadDocument
+                to={localizePath('/about', lang)}
+                className="inline-flex items-center gap-3 bg-accent-yellow text-ink-900 font-sans font-bold text-sm md:text-base px-8 py-4 transition-all hover:-translate-y-1"
+              >
+                {isEn ? 'More About HCM' : 'Selengkapnya Tentang HCM'}
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </Container>
       </div>

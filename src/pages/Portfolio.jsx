@@ -44,19 +44,19 @@ export function PortfolioPage() {
 
           <h1 className="font-sans leading-[0.95] tracking-tight">
             <span className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
-              <span data-gsap="clip-left" className="max-w-full text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+              <span data-gsap="clip-left" className="max-w-full text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold text-white">
                 {isEn ? 'PROVEN' : 'BUKTI'}
               </span>
               <span data-gsap="pop" data-gsap-delay="0.1" className="relative inline-block max-w-full">
-                <img src={starIcon} alt="" aria-hidden="true" className="absolute -right-4 -top-9 h-12 w-12 animate-float sm:-right-10 sm:-top-10 sm:h-20 sm:w-20 md:-right-14 md:-top-14 md:h-28 md:w-28" />
-                <span className="relative block bg-accent-yellow px-4 py-2 pr-7 font-sans text-3xl font-extrabold tracking-tight text-ink-900 sm:px-5 sm:pr-5 sm:text-4xl md:px-8 md:text-5xl">
+                <img src={starIcon} alt="" aria-hidden="true" className="absolute right-1 top-1 h-7 w-7 animate-float min-[360px]:-right-4 min-[360px]:-top-9 min-[360px]:h-12 min-[360px]:w-12 sm:-right-10 sm:-top-10 sm:h-20 sm:w-20 md:-right-14 md:-top-14 md:h-28 md:w-28" />
+                <span className="relative block max-w-full bg-accent-yellow px-4 py-2 pr-9 font-sans text-[clamp(1.45rem,6vw,3rem)] font-extrabold tracking-tight text-ink-900 min-[360px]:pr-6 sm:px-5 sm:pr-5 md:px-8">
                   {isEn ? 'Growth' : 'Nyata'}
                 </span>
               </span>
             </span>
 
             <span className="mt-4 flex flex-wrap items-center gap-3 sm:gap-4 md:mt-6 md:gap-6">
-              <span data-gsap="clip-left" data-gsap-delay="0.08" className="max-w-full text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+              <span data-gsap="clip-left" data-gsap-delay="0.08" className="max-w-full text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold text-white">
                 {isEn ? 'METRICS' : 'PERTUMBUHAN'}
               </span>
               <span data-gsap="zoom" data-gsap-delay="0.15" className="inline-flex h-auto min-h-12 max-w-full flex-wrap items-center gap-2 rounded-full bg-[#CEFE4A] px-4 py-2 font-sans text-xs font-black uppercase tracking-widest text-ink-900 sm:min-h-14 sm:px-5 sm:text-sm md:px-6">
@@ -67,7 +67,7 @@ export function PortfolioPage() {
             </span>
 
             <span className="mt-6 grid items-end gap-6 xl:grid-cols-[auto_1fr_auto] xl:gap-10">
-              <span data-gsap="clip-left" data-gsap-delay="0.14" className="font-sans text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">HCM</span>
+              <span data-gsap="clip-left" data-gsap-delay="0.14" className="font-sans text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold tracking-tight text-white">HCM</span>
               <span data-gsap="zoom" data-gsap-delay="0.2" className="type-body max-w-xl font-sans text-white/85">
                 {t('portfolio.subtitle')}
               </span>

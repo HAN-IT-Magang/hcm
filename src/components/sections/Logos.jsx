@@ -73,7 +73,7 @@ export function Logos() {
               <div
                 key={idx}
                 data-gsap-item="zoom"
-                className={`text-white text-center hover:scale-110 transition-transform duration-300 cursor-default ${client.font}`}
+                className={`min-w-0 break-words px-1 text-center text-white transition-transform duration-300 hover:scale-110 cursor-default ${client.font}`}
               >
                 {client.name}
               </div>

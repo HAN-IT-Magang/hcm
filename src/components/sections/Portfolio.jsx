@@ -71,7 +71,7 @@ export function Portfolio() {
                 return (
                   <article
                     key={`${work.id}-${copy}`}
-                    className="w-[78vw] shrink-0 sm:w-[420px] md:w-[500px]"
+                    className="w-[min(68vw,280px)] shrink-0 sm:w-[420px] md:w-[500px]"
                     aria-hidden={copy === 1 ? true : undefined}
                   >
                   <h3 className="type-h3 mb-4 text-center font-sans text-white">

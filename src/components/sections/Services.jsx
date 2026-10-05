@@ -85,12 +85,10 @@ export function Services() {
         }
       })
 
-      // Mobile: swipe kartu native. Layanan terkunci di atas layar;
-      // sedikit scroll vertikal membuat portofolio langsung menutupinya.
+      // Mobile: geser kartu horizontal. Tanpa pin, biar tidak ada ruang kosong.
       mm.add('(max-width: 767px)', () => {
         const viewport = viewportRef.current
-        const section = sectionRef.current
-        if (!viewport || !section) return
+        if (!viewport) return
 
         const onScroll = () => {
           const max = viewport.scrollWidth - viewport.clientWidth
@@ -102,17 +100,7 @@ export function Services() {
         viewport.addEventListener('scroll', onScroll, { passive: true })
         onScroll()
 
-        const trigger = ScrollTrigger.create({
-          trigger: section,
-          start: 'top top',
-          end: () => `+=${Math.round(Math.max(section.offsetHeight - 32, window.innerHeight * 0.55))}`,
-          pin: true,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        })
-
         return () => {
-          trigger.kill()
           viewport.removeEventListener('scroll', onScroll)
         }
       })
@@ -167,7 +155,7 @@ export function Services() {
                  key={s.id}
                  reloadDocument
                  to={localizePath(`/layanan/${s.slug}`, lang)}
-                 className="snap-start shrink-0 w-[280px] md:w-[360px] min-h-[300px] md:min-h-[380px] flex flex-col bg-white border border-ink-900/10 p-8"
+                 className="snap-start shrink-0 w-[min(17.5rem,calc(100vw-4.75rem))] md:w-[360px] min-h-[280px] md:min-h-[380px] flex flex-col bg-white border border-ink-900/10 p-6 md:p-8"
                >
                   <h3 className="type-h3 font-sans text-ink-900">
                     {s.title}

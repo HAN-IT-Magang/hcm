@@ -37,26 +37,26 @@ export function HeroAbout() {
         {/* ====== TIPOGRAFI ALA BILLA ====== */}
         <h1 className="font-sans leading-[0.95] tracking-tight">
           {/* Baris 1: YOUR + kotak kuning */}
-          <span className="flex flex-wrap items-center gap-4 md:gap-6">
-            <span data-gsap="clip-left" className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+          <span className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
+            <span data-gsap="clip-left" className="max-w-full text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold text-white">
               {isEn ? 'YOUR' : 'MILIKMU'}
             </span>
-            <span data-gsap="pop" data-gsap-delay="0.1" className="relative inline-block">
+            <span data-gsap="pop" data-gsap-delay="0.1" className="relative inline-block max-w-full">
               {/* icon starburst asli */}
-              <img src={starIcon} alt="" aria-hidden="true" className="absolute -right-10 -top-10 h-20 w-20 animate-float md:-right-14 md:-top-14 md:h-28 md:w-28" />
-              <span className="relative block bg-accent-yellow px-5 py-2 font-sans text-3xl font-extrabold tracking-tight text-ink-900 sm:text-4xl md:px-8 md:text-5xl">
+              <img src={starIcon} alt="" aria-hidden="true" className="absolute right-1 top-1 h-7 w-7 animate-float min-[360px]:-right-3 min-[360px]:-top-7 min-[360px]:h-12 min-[360px]:w-12 sm:-right-10 sm:-top-10 sm:h-20 sm:w-20 md:-right-14 md:-top-14 md:h-28 md:w-28" />
+              <span className="relative block max-w-full bg-accent-yellow px-4 py-2 pr-9 font-sans text-[clamp(1.45rem,6vw,3rem)] font-extrabold tracking-tight text-ink-900 min-[360px]:pr-6 sm:px-5 sm:pr-5 md:px-8">
                 {isEn ? 'All In One' : 'Satu Atap'}
               </span>
             </span>
           </span>
 
           {/* Baris 2: CREATIVE + pill pengganti foto (TANPA FOTO) */}
-          <span className="mt-3 flex flex-wrap items-center gap-4 md:mt-4 md:gap-6">
-            <span data-gsap="clip-left" data-gsap-delay="0.08" className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+          <span className="mt-3 flex flex-wrap items-center gap-3 sm:gap-4 md:mt-4 md:gap-6">
+            <span data-gsap="clip-left" data-gsap-delay="0.08" className="max-w-full text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold text-white">
               {isEn ? 'CREATIVE' : 'KREATIF'}
             </span>
             {/* pill statik — bukan foto: marquee mini creator */}
-            <span data-gsap="zoom" data-gsap-delay="0.15" className="inline-flex h-12 items-center gap-2 overflow-hidden rounded-full bg-[#CEFE4A] px-5 font-sans text-xs font-black uppercase tracking-widest text-ink-900 sm:h-14 sm:text-sm md:px-6">
+            <span data-gsap="zoom" data-gsap-delay="0.15" className="inline-flex h-auto min-h-11 max-w-full flex-wrap items-center gap-2 rounded-full bg-[#CEFE4A] px-4 py-2 font-sans text-xs font-black uppercase tracking-widest text-ink-900 sm:min-h-14 sm:px-5 sm:text-sm md:px-6">
               <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-accent-magenta" />
               {isEn ? '500+ Creators' : '500+ Kreator'}
               <Zap className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
@@ -65,7 +65,7 @@ export function HeroAbout() {
 
           {/* Baris 3: Agency + deskripsi + CTA */}
           <span className="mt-4 grid items-end gap-6 md:mt-6 lg:grid-cols-[auto_1fr_auto] lg:gap-10">
-            <span data-gsap="clip-left" data-gsap-delay="0.14" className="inline-block overflow-visible pb-4 pt-1 font-sans text-4xl font-extrabold tracking-tight leading-[1.15] text-white sm:text-5xl md:text-6xl">
+            <span data-gsap="clip-left" data-gsap-delay="0.14" className="inline-block max-w-full overflow-visible pb-4 pt-1 font-sans text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold tracking-tight leading-[1.15] text-white">
               {isEn ? 'Agency' : 'Agensi'}
             </span>
             <span data-gsap="zoom" data-gsap-delay="0.2" className="type-body max-w-md font-sans text-white/85">

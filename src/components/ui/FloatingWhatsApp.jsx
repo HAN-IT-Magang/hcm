@@ -105,9 +105,9 @@ export function FloatingWhatsApp() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed right-0 top-1/2 z-[70] -translate-y-1/2 rounded-l-2xl bg-[#FF1E8F] px-3 py-4 font-sans text-sm font-semibold leading-tight text-white shadow-lg"
+        className="fixed right-0 z-[70] rounded-l-2xl bg-[#FF1E8F] px-2.5 py-2.5 font-sans text-xs font-semibold leading-tight text-white shadow-lg bottom-[max(1rem,env(safe-area-inset-bottom))] md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:px-3 md:py-4 md:text-sm"
       >
-        <span className="block w-16 text-center">{text.tab}</span>
+        <span className="block w-14 text-center md:w-16">{text.tab}</span>
       </button>
 
       {open && (
@@ -132,13 +132,13 @@ export function FloatingWhatsApp() {
             >
               ×
             </button>
-            <div className="px-6 py-8 sm:px-8 sm:py-10">
+            <div className="px-5 py-6 pr-14 sm:px-8 sm:py-10">
               <h2 id="hcm-contact-title" className="font-sans text-2xl font-bold text-[#00104D]">
                 {text.title}
               </h2>
               <p className="type-small mt-4 max-w-xs font-sans text-[#00104D]/80">{text.intro}</p>
             </div>
-            <form onSubmit={submit} className="grid gap-x-6 gap-y-5 px-6 py-8 sm:grid-cols-2 sm:px-8 sm:py-10">
+            <form onSubmit={submit} className="grid gap-x-6 gap-y-5 px-5 py-6 sm:grid-cols-2 sm:px-8 sm:py-10">
               <label className="block font-sans text-sm font-semibold text-[#00104D]">
                 {text.name}<span className="text-[#FF1E8F]">*</span>
                 <input className={field} value={form.name} placeholder={text.namePh} onChange={(event) => setField('name', event.target.value)} />
@@ -166,7 +166,7 @@ export function FloatingWhatsApp() {
               </label>
               {error && <p className="font-sans text-sm text-[#FF1E8F] sm:col-span-2">{error}</p>}
               <div className="sm:col-span-2 sm:text-right">
-                <button type="submit" className="rounded-full bg-[#FF1E8F] px-8 py-3 font-sans text-sm font-semibold text-white">
+                <button type="submit" className="w-full rounded-full bg-[#FF1E8F] px-8 py-3 font-sans text-sm font-semibold text-white sm:w-auto">
                   {text.send}
                 </button>
               </div>
