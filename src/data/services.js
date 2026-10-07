@@ -1,13 +1,3 @@
-/**
- * Semua teks halaman layanan ada di file ini.
- * Ubah judul, pill, ringkasan, atau poin di sini. Tidak perlu sentuh komponen.
- *
- * slug = bagian alamat. Contoh slug "multimedia" membuka /layanan/multimedia
- * Pakai huruf kecil dan tanda hubung. Jangan pakai spasi.
- * lead = kata putih di hero. highlight = kata di kotak kuning.
- * faq = pertanyaan di blok biru. Tiap layanan punya daftar sendiri.
- */
-
 export const services = [
   {
     slug: 'multimedia',

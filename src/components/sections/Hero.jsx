@@ -15,10 +15,10 @@ export function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex flex-col justify-center bg-gradient-to-br from-brand-600 via-brand-500 to-accent-cyan overflow-hidden pt-24 md:pt-32">
 
-      {/* Abstract Background Shapes — 2 garis bleed melewati layar */}
+      {/* Bentuk latar */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <svg data-gsap-parallax="-6" viewBox="0 0 1440 800" className="absolute top-0 h-full w-[130%] -left-[15%] opacity-80" preserveAspectRatio="xMidYMid slice" style={{ overflow: 'visible' }}>
-          {/* Magenta Swoosh — ujung kiri-kanan lewat batas layar */}
+          {/* Swoosh */}
           <path d="M-300,620 C300,500 500,820 820,400 C1120,-20 1400,220 1750,80" fill="none" stroke="#ff007f" strokeWidth="80" strokeLinecap="round" className="opacity-90" />
           <path d="M-300,820 C400,620 600,1020 920,600 C1220,180 1420,420 1750,280" fill="none" stroke="#00d0ff" strokeWidth="40" strokeLinecap="round" className="opacity-40" />
         </svg>
@@ -26,7 +26,7 @@ export function Hero() {
 
       <Container className="relative z-10 flex-1 flex flex-col items-center justify-center text-center">
 
-        {/* Main Logo Image "HAN" */}
+        {/* Logo */}
         <div className="relative mb-6 flex justify-center items-center">
           <img
             data-gsap="zoom"
@@ -37,7 +37,7 @@ export function Hero() {
           />
         </div>
 
-        {/* Subtitle Box — Stacked */}
+        {/* Subjudul */}
         <div className="mt-8 flex w-full max-w-4xl flex-col items-center justify-center gap-1 border-t-2 border-white/30 bg-transparent pt-5 md:mt-16 md:gap-2 md:pt-10">
           <div data-gsap="clip-right" data-gsap-hero="5">
             <h2 className="text-white font-sans font-bold type-h3 tracking-wide text-center">
@@ -46,7 +46,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* CTA Button — zoom tengah */}
+        {/* CTA */}
         <div data-gsap="zoom" data-gsap-hero="6" className="mt-8 mb-8 md:mt-10 md:mb-12">
           <a
             href={waUrl}

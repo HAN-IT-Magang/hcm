@@ -11,10 +11,6 @@ const prefersReduced = () =>
   typeof window !== 'undefined' &&
   window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-// Pola Awwwards: TIDAK ada yang dari bawah (no y).
-// Semua masuk dari kiri / kanan / scale / clip.
-// SENGAJA tanpa filter blur & tanpa MutationObserver:
-// blur di gambar besar mengunci compositor, observer bisa ping-pong -> freeze.
 function varsFor(type, mobile) {
   const dx = mobile ? 40 : 110
   const far = mobile ? 64 : 180
@@ -65,7 +61,6 @@ function easeFor(type) {
   return 'power4.out'
 }
 
-// State akhir. clipPath hanya disertakan kalau state awal pakai clip.
 function endVars(from) {
   const v = { x: 0, scale: 1, rotation: 0, rotationY: 0, opacity: 1 }
   if (from.clipPath) v.clipPath = 'inset(0% 0% 0% 0%)'
@@ -82,8 +77,6 @@ function resolveItemType(group, el, index) {
   return base
 }
 
-// Main langsung (bukan saat scroll). Dipakai panel yang muncul karena klik,
-// dengan pola gerak yang sama: kiri, kanan, zoom, pop. Tanpa sumbu Y.
 export function playGsapIn(root) {
   if (!root || prefersReduced()) return undefined
   const mobile = isMobile()
@@ -130,13 +123,12 @@ export function playGsapIn(root) {
 
 export function useGsapReveal() {
   useLayoutEffect(() => {
-    // Hormati prefers-reduced-motion: tampil normal tanpa animasi.
     if (prefersReduced()) return undefined
 
     const ctx = gsap.context(() => {
       const mobile = isMobile()
 
-      // 1. Elemen tunggal [data-gsap] (kecuali hero intro)
+      // 1. Elemen tunggal
       gsap.utils.toArray('[data-gsap]:not([data-gsap-hero])').forEach((el) => {
         const type = el.dataset.gsap || 'fade'
         const from = varsFor(type, mobile)
@@ -146,7 +138,6 @@ export function useGsapReveal() {
           duration: parseFloat(el.dataset.gsapDuration || '1'),
           delay: parseFloat(el.dataset.gsapDelay || '0'),
           ease: easeFor(type),
-          // Replay tiap masuk viewport: masuk = main, keluar = balik.
           scrollTrigger: {
             trigger: el,
             start: 'top 90%',
@@ -156,7 +147,7 @@ export function useGsapReveal() {
         })
       })
 
-      // 2. Grup stagger [data-gsap-group] > [data-gsap-item]
+      // 2. Grup stagger
       gsap.utils.toArray('[data-gsap-group]').forEach((group) => {
         const kids = Array.from(group.querySelectorAll('[data-gsap-item]'))
         if (!kids.length) return
@@ -174,7 +165,6 @@ export function useGsapReveal() {
           duration: 0.9,
           ease: 'power4.out',
           stagger: parseFloat(group.dataset.gsapStagger || '0.1'),
-          // Replay tiap masuk viewport: masuk = main, keluar = balik.
           scrollTrigger: {
             trigger: group,
             start: 'top 88%',
@@ -184,8 +174,7 @@ export function useGsapReveal() {
         })
       })
 
-      // 3. Hero intro timeline: main saat load, dan replay tiap balik ke atas.
-      // Kiri dari kiri, kanan dari kanan, tengah pop — paralel + stagger.
+      // 3. Hero intro
       const heroEls = gsap.utils
         .toArray('[data-gsap-hero]')
         .sort(
@@ -214,7 +203,7 @@ export function useGsapReveal() {
         })
       }
 
-      // 4. Parallax ringan untuk background (scrub, tanpa pin)
+      // 4. Parallax
       gsap.utils.toArray('[data-gsap-parallax]').forEach((el) => {
         gsap.to(el, {
           xPercent: parseFloat(el.dataset.gsapParallax || '10'),
@@ -228,8 +217,7 @@ export function useGsapReveal() {
         })
       })
 
-      // Refresh sekali setelah semua aset (gambar/font) selesai dimuat,
-      // supaya posisi trigger akurat. Satu kali saja, bukan tiap mutasi.
+      // 5. Refresh trigger
       const onLoad = () => ScrollTrigger.refresh()
       if (document.readyState === 'complete') {
         onLoad()

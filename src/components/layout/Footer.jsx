@@ -22,9 +22,9 @@ export function Footer() {
 
   return (
     <footer id="kontak" className="relative z-40 bg-white scroll-mt-24">
-      {/* Blok biru: solid kiri, pixel kanan — kartu putih di dalamnya */}
+      {/* Blok biru */}
       <div className="relative overflow-hidden bg-[#2637AD]">
-        {/* Lapisan pixel — kanan saja */}
+        {/* Lapisan pixel */}
         <div className="absolute inset-y-0 right-0 w-[45%] overflow-hidden pointer-events-none" aria-hidden="true">
           <div
             className="absolute inset-0"
@@ -46,10 +46,10 @@ export function Footer() {
         </div>
 
         <Container className="relative z-10 pt-10 md:pt-14 pb-8">
-          {/* Konten — struktur: Judul | Kontak | Navigasi | Layanan (2 kolom) */}
+          {/* Konten */}
           <div data-gsap="fade" className="bg-white rounded-2xl p-8 md:p-12">
             <div data-gsap-group="stagger" data-gsap-stagger="0.08" className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1.1fr_0.7fr_1.4fr]">
-              {/* Judul besar */}
+              {/* Judul */}
               <div data-gsap-item="zoom">
                 <p className="type-display font-sans text-ink-900">
                   {isEn ? "Let's" : 'Mari'}
@@ -107,7 +107,7 @@ export function Footer() {
                 </ul>
               </div>
 
-              {/* Layanan — 2 sub-kolom */}
+              {/* Layanan */}
               <div data-gsap-item="zoom">
                 <h4 className="mb-4 font-sans text-sm font-bold uppercase tracking-widest text-ink-900">
                   {isEn ? 'Services' : 'Layanan'}
@@ -135,7 +135,7 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Bar bawah: social teks + copyright */}
+            {/* Bar bawah */}
             <div className="mt-10 pt-6 border-t border-ink-900/10 flex flex-col md:flex-row md:items-center gap-4 md:justify-between">
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
                 <a href={siteConfig.contact.instagram} target="_blank" rel="noreferrer" className="font-sans text-sm font-semibold text-ink-700 hover:text-brand-600 transition-colors">Instagram</a>

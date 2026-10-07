@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '../ui/Container'
 
-// Using individual team member photos from aboutfotot
 import div1Img from '../../assets/aboutfotot/Contents (10).png'
 import div2Img from '../../assets/aboutfotot/Contents (7).png'
 import div3Img from '../../assets/aboutfotot/Contents (11).png'
@@ -37,7 +36,7 @@ export function Division() {
   return (
     <section id="division" className="relative z-10 bg-gradient-to-b from-[#3561FF] to-[#1D40FF] overflow-hidden py-20 md:py-32">
 
-      {/* Background Graphic Swoosh (Large White Wave) */}
+      {/* Swoosh latar */}
       <div className="absolute top-[30%] left-0 w-full h-[500px] pointer-events-none opacity-[0.15] overflow-hidden">
         <svg viewBox="0 0 1000 300" className="w-full h-full transform scale-150" preserveAspectRatio="none">
           <path d="M-100,200 C200,100 400,350 700,200 C900,100 1100,150 1200,150" fill="none" stroke="#FFFFFF" strokeWidth="80" strokeLinecap="round" />
@@ -46,29 +45,28 @@ export function Division() {
 
       <Container className="relative z-10 max-w-7xl mx-auto">
 
-        {/* Title Badge exactly as PDF (Clean Pink Box) — wipe dari kiri */}
+        {/* Badge judul */}
         <div className="flex justify-center mb-16 md:mb-24">
           <div data-gsap="clip-left" className="inline-block bg-[#E80F88] text-white font-sans font-bold type-h2 py-4 px-12">
             Our Division
           </div>
         </div>
 
-        {/* 3 Columns Grid — kiri / zoom / kanan */}
+        {/* Grid divisi */}
         <div data-gsap-group="alternate-far" data-gsap-stagger="0.15" className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x-2 divide-white/30">
 
           {divisions.map((item, idx) => {
-            // Label colors for each division to make them pop
             const labelColors = [
-              'bg-[#CEFE4A] text-[#00104D]', // Lime Green
-              'bg-[#FF2E93] text-white',      // Hot Pink
-              'bg-[#FFD600] text-[#00104D]'   // Bright Yellow
+              'bg-[#CEFE4A] text-[#00104D]',
+              'bg-[#FF2E93] text-white',
+              'bg-[#FFD600] text-[#00104D]',
             ]
             const labelClass = labelColors[idx % labelColors.length]
 
             return (
               <div key={idx} data-gsap-item="auto" className="relative flex flex-col group px-6 md:px-10 pb-10">
 
-                {/* Photo Area (No Background, Just Image) */}
+                {/* Foto */}
                 <div className="w-full h-[350px] md:h-[450px] flex items-end justify-center relative z-10">
                   <img
                     src={item.img}
@@ -77,7 +75,7 @@ export function Division() {
                   />
                 </div>
 
-                {/* Text Area (Label overlapping the image cut) */}
+                {/* Teks */}
                 <div className="text-left flex-1 flex flex-col relative z-20 -mt-6 md:-mt-10 items-center text-center">
                   <div className={`inline-block ${labelClass} px-5 py-3 mb-4 shadow-lg transform group-hover:-translate-y-1 transition-transform`}>
                     <h3 className="font-sans font-bold text-2xl md:text-3xl whitespace-pre-line leading-tight m-0">

@@ -35,7 +35,7 @@ export function Logos() {
     <section id="logos" className="relative z-[60] bg-[#0030FF] pt-6 pb-24 overflow-hidden md:z-10 md:bg-gradient-to-br md:from-[#1C4BFF] md:to-[#0030FF] md:pt-20">
       <div className="pointer-events-none absolute inset-0 bg-[#0030FF] md:hidden" aria-hidden="true" />
       
-      {/* Right side cutout and "Our Clients" Badge — panel dari kanan jauh */}
+      {/* Panel klien */}
       <div data-gsap="right-far" className="hidden lg:block absolute top-0 right-0 h-full w-1/3 bg-white z-0 rounded-l-[100px] shadow-2xl">
         <div className="absolute top-20 -left-12 flex flex-col items-end z-30">
           <div className="type-h2 relative z-10 -mb-4 bg-brand-500 px-6 py-2 font-sans text-white shadow-lg">{badgeA}</div>
@@ -44,7 +44,7 @@ export function Logos() {
         
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-accent-magenta rounded-full blur-[80px] opacity-20 pointer-events-none" />
         
-        {/* The requested photo, pasted inside the white area */}
+        {/* Foto klien */}
         <img 
           src={clientImg} 
           alt={t('logos.title')} 
@@ -55,7 +55,7 @@ export function Logos() {
       <Container className="relative z-10">
         
         <div className="lg:w-2/3">
-          {/* Header — angka dari kiri jauh, teks dari kanan */}
+          {/* Header */}
           <div className="flex flex-col md:flex-row items-baseline gap-6 mb-12">
             <h2 data-gsap="left-far" className="font-sans font-extrabold type-display text-white leading-none">
               100+
@@ -67,7 +67,7 @@ export function Logos() {
             </div>
           </div>
 
-          {/* Grid — stagger zoom */}
+          {/* Grid logo */}
           <div data-gsap-group="stagger" data-gsap-stagger="0.06" className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center mb-16 relative z-10">
             {clients.map((client, idx) => (
               <div
@@ -80,7 +80,7 @@ export function Logos() {
             ))}
           </div>
 
-          {/* Button — pop */}
+          {/* Tombol */}
           <div data-gsap="pop" className="flex justify-center md:justify-start">
             <button className="flex items-center gap-4 bg-white text-[#0030FF] font-sans font-bold text-lg px-6 py-3 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
               {t('logos.more')} 

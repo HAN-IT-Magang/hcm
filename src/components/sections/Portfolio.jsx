@@ -19,7 +19,6 @@ export const categoryLabel = {
   web: { id: 'Web Development', en: 'Web Development' },
 }
 
-// Dummy dulu. Ganti `image` dengan file asli dari folder kategori.
 export const portfolioWorks = [
   { id: 'takara', category: 'photo', brand: 'Takara', type: 'image', image: takaraImg },
   { id: 'vitalis', category: 'photo', brand: 'Vitalis', type: 'image', image: vitalisImg },

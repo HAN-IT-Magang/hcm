@@ -19,13 +19,13 @@ export function HeroAbout() {
 
   return (
     <section className="relative flex flex-col justify-center overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-accent-cyan pt-[72px] lg:pt-[80px]">
-      {/* glow halus biar teks kebaca */}
+      {/* Glow */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/3 top-1/4 h-[420px] w-[720px] -translate-x-1/2 bg-white/10 blur-[110px]" />
       </div>
 
       <Container className="relative z-10 px-6 py-14 md:py-20">
-        {/* breadcrumb kecil — penanda halaman */}
+        {/* Breadcrumb */}
         <nav data-gsap="zoom" aria-label="Breadcrumb" className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/40 px-4 py-1.5 font-sans text-xs font-medium text-white/85 md:text-sm">
           <Link to={localizePath('/', lang)} reloadDocument className="transition-colors hover:text-white">
             {isEn ? 'Home' : 'Beranda'}
@@ -34,15 +34,15 @@ export function HeroAbout() {
           <span className="text-white">{isEn ? 'About Us' : 'Tentang Kami'}</span>
         </nav>
 
-        {/* ====== TIPOGRAFI ALA BILLA ====== */}
+        {/* Judul */}
         <h1 className="font-sans leading-[0.95] tracking-tight">
-          {/* Baris 1: YOUR + kotak kuning */}
+          {/* Baris 1 */}
           <span className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
             <span data-gsap="clip-left" className="max-w-full text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold text-white">
               {isEn ? 'YOUR' : 'MILIKMU'}
             </span>
             <span data-gsap="pop" data-gsap-delay="0.1" className="relative inline-block max-w-full">
-              {/* icon starburst asli */}
+              {/* Ikon bintang */}
               <img src={starIcon} alt="" aria-hidden="true" className="absolute right-1 top-1 h-7 w-7 animate-float min-[360px]:-right-3 min-[360px]:-top-7 min-[360px]:h-12 min-[360px]:w-12 sm:-right-10 sm:-top-10 sm:h-20 sm:w-20 md:-right-14 md:-top-14 md:h-28 md:w-28" />
               <span className="relative block max-w-full bg-accent-yellow px-4 py-2 pr-9 font-sans text-[clamp(1.45rem,6vw,3rem)] font-extrabold tracking-tight text-ink-900 min-[360px]:pr-6 sm:px-5 sm:pr-5 md:px-8">
                 {isEn ? 'All In One' : 'Satu Atap'}
@@ -50,12 +50,12 @@ export function HeroAbout() {
             </span>
           </span>
 
-          {/* Baris 2: CREATIVE + pill pengganti foto (TANPA FOTO) */}
+          {/* Baris 2 */}
           <span className="mt-3 flex flex-wrap items-center gap-3 sm:gap-4 md:mt-4 md:gap-6">
             <span data-gsap="clip-left" data-gsap-delay="0.08" className="max-w-full text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold text-white">
               {isEn ? 'CREATIVE' : 'KREATIF'}
             </span>
-            {/* pill statik — bukan foto: marquee mini creator */}
+            {/* Pill kreator */}
             <span data-gsap="zoom" data-gsap-delay="0.15" className="inline-flex h-auto min-h-11 max-w-full flex-wrap items-center gap-2 rounded-full bg-[#CEFE4A] px-4 py-2 font-sans text-xs font-black uppercase tracking-widest text-ink-900 sm:min-h-14 sm:px-5 sm:text-sm md:px-6">
               <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-accent-magenta" />
               {isEn ? '500+ Creators' : '500+ Kreator'}
@@ -63,7 +63,7 @@ export function HeroAbout() {
             </span>
           </span>
 
-          {/* Baris 3: Agency + deskripsi + CTA */}
+          {/* Baris 3 */}
           <span className="mt-4 grid items-end gap-6 md:mt-6 lg:grid-cols-[auto_1fr_auto] lg:gap-10">
             <span data-gsap="clip-left" data-gsap-delay="0.14" className="inline-block max-w-full overflow-visible pb-4 pt-1 font-sans text-[clamp(1.85rem,8vw,3.75rem)] font-extrabold tracking-tight leading-[1.15] text-white">
               {isEn ? 'Agency' : 'Agensi'}

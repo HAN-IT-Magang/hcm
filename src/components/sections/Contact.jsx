@@ -19,24 +19,24 @@ export function Contact() {
 
       <Container className="relative z-10">
         <div className="max-w-5xl">
-          {/* Judul atas — wipe dari kiri */}
+          {/* Judul */}
           <h2 data-gsap="clip-left" className="font-sans font-extrabold type-display text-white mb-4 drop-shadow-md">
             Grow Your <br /> Brand With
           </h2>
           <div className="flex flex-col md:flex-row items-baseline gap-4 md:gap-6 mb-16">
-            {/* Huruf H-A-N — stagger: H kiri, A pop, N kanan */}
+            {/* Huruf HAN */}
             <h1 data-gsap-group="stagger" data-gsap-stagger="0.12" className="font-sans font-black text-[2.5rem] md:text-[3.5rem] text-white leading-none flex items-center drop-shadow-xl">
               <span data-gsap-item="left" className="bg-white text-brand-600 px-4 py-1 rounded-sm mr-4 md:mr-6">H</span>
               <span data-gsap-item="pop" className="bg-white text-brand-600 px-4 py-1 rounded-sm mr-4 md:mr-6">A</span>
               <span data-gsap-item="right" className="bg-white text-brand-600 px-4 py-1 rounded-sm">N</span>
             </h1>
-            {/* Creative Marketing — wipe dari kanan */}
+            {/* Nama brand */}
             <h2 data-gsap="clip-right" data-gsap-delay="0.15" className="font-sans font-extrabold type-h2 text-white drop-shadow-md mt-4 md:mt-0">
               Creative <br /> Marketing
             </h2>
           </div>
 
-          {/* CTA — pop */}
+          {/* CTA */}
           <a
             data-gsap="pop"
             data-gsap-delay="0.2"

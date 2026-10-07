@@ -30,7 +30,6 @@ async function localeLoader({ params, request }) {
   try {
     localStorage.setItem(STORAGE_KEY, lang)
   } catch {
-    /* private mode */
   }
 
   const active = (i18n.resolvedLanguage || i18n.language || '').split('-')[0]

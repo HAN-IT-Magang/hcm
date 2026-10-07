@@ -46,15 +46,12 @@ export function Services() {
   const trackRef = useRef(null)
   const progressRef = useRef(null)
 
-  // Scroll ke bawah (vertical) -> track kartu geser horizontal (scrub + pin).
-  // Mobile: fallback swipe horizontal native (tanpa pin).
   useLayoutEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia()
 
-      // Desktop / tablet: pin section, vertical scroll menggerakkan track ke kiri
-      // (kartu baru masuk dari kanan).
+      // Desktop
       mm.add('(min-width: 768px)', () => {
         const track = trackRef.current
         const viewport = viewportRef.current
@@ -85,7 +82,7 @@ export function Services() {
         }
       })
 
-      // Mobile: geser kartu horizontal. Tanpa pin, biar tidak ada ruang kosong.
+      // Mobile
       mm.add('(max-width: 767px)', () => {
         const viewport = viewportRef.current
         if (!viewport) return
@@ -129,7 +126,7 @@ export function Services() {
     <section ref={sectionRef} id="services" className="relative z-50 bg-brand-50 pt-20 lg:pt-28 pb-12 lg:pb-16 overflow-hidden -mt-8 md:-mt-14 rounded-t-[2rem] md:rounded-t-[3.5rem]">
       <Container className="max-w-[90rem] relative z-10">
 
-         {/* Header — judul + petunjuk scroll */}
+         {/* Header */}
          <div className="mb-10 md:mb-14 border-b border-ink-900/10 pb-8 flex flex-col md:flex-row md:justify-between md:items-end gap-6">
             <h2 data-gsap="clip-left" data-gsap-once className="type-h2 font-sans text-ink-900 max-w-2xl">
                {lang === 'en'
@@ -144,7 +141,7 @@ export function Services() {
             </div>
          </div>
 
-          {/* Horizontal Slider — digerakkan scroll vertical (desktop pin) */}
+          {/* Slider */}
           <div
             ref={viewportRef}
             className="overflow-x-auto md:overflow-visible pb-10 pt-2 snap-x snap-mandatory md:snap-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
@@ -170,12 +167,12 @@ export function Services() {
                   </p>
                </Link>
             ))}
-            {/* spacer kanan biar kartu terakhir tidak nempel */}
+            {/* Spacer */}
             <div className="shrink-0 w-2 md:w-[4vw]" aria-hidden="true" />
             </div>
           </div>
 
-          {/* Progress — garis tipis + isi biru brand */}
+          {/* Progress */}
           <div className="flex items-center gap-4">
             <div className="h-[2px] flex-1 bg-ink-900/10 overflow-hidden">
               <div

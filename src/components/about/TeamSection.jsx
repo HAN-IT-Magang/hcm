@@ -10,7 +10,6 @@ import member4 from '@/assets/aboutfotot/Contents (9).png'
 import member5 from '@/assets/aboutfotot/Contents (10).png'
 import member6 from '@/assets/aboutfotot/Contents (11).png'
 
-// TODO: ganti name & role dengan data asli tim
 const members = [
   { src: member1, name: 'Data 1', role: { id: 'Koordinator Marketing', en: 'Marketing Coordinator' } },
   { src: member2, name: 'Data 2', role: { id: 'Eksekutif Akun', en: 'Account Executive' } },
@@ -40,7 +39,7 @@ export function TeamSection() {
 
   return (
     <section className="relative overflow-hidden bg-white">
-      {/* Foto grup full-bleed — tinggi dikunci, wajah aman di tengah-atas */}
+      {/* Foto grup */}
       <div className="relative">
         <img
           data-gsap="zoom"
@@ -49,11 +48,11 @@ export function TeamSection() {
           className="h-auto w-full md:h-[520px] md:object-cover md:object-[50%_30%] lg:h-[600px]"
           loading="lazy"
         />
-        {/* fade bawah nyambung ke konten biru */}
+        {/* Fade bawah */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-brand-600 via-brand-600/60 to-transparent md:h-56" />
       </div>
 
-      {/* Konten biru — label, deskripsi, company profile, counter, pills */}
+      {/* Konten biru */}
       <div className="relative overflow-hidden bg-brand-600 pb-16 pt-4 md:pb-24">
         <div
           className="pointer-events-none absolute -left-[5%] top-[10%] h-[400px] w-[500px] opacity-50"
@@ -140,10 +139,10 @@ export function TeamSection() {
         </div>
       </div>
 
-      {/* Anggota tim — "Leadership" Miro Style */}
+      {/* Anggota tim */}
       <div className="bg-white py-24 md:py-32 relative overflow-hidden">
         
-        {/* SVG Clip Paths for Shapes */}
+        {/* Clip path */}
         <svg width="0" height="0" className="absolute pointer-events-none">
           <defs>
             <clipPath id="shape-0" clipPathUnits="objectBoundingBox">
@@ -183,7 +182,7 @@ export function TeamSection() {
                   break;
                 case 1:
                   bg = 'bg-[#354BEB]';
-                  clip = 'circle(48% at 50% 50%)'; // Slightly smaller circle to allow decorative dots outside
+                  clip = 'circle(48% at 50% 50%)';
                   extraElements = (
                     <>
                       <div className="absolute top-[0%] right-[-5%] w-[20%] h-[20%] rounded-full bg-[#354BEB] -z-10"></div>
@@ -219,7 +218,7 @@ export function TeamSection() {
                   <div className="relative w-full aspect-square flex justify-center items-end">
                     {extraElements}
                     
-                    {/* The container acts as the clipping mask for BOTH the background color and the image */}
+                    {/* Mask foto */}
                     <div 
                       className={`absolute inset-0 w-full h-full ${bg} flex justify-center items-end`}
                       style={{ clipPath: clip, WebkitClipPath: clip }}

@@ -6,7 +6,6 @@ export function readStoredLang() {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved === 'id' || saved === 'en') return saved
   } catch {
-    /* private mode */
   }
   return 'id'
 }
